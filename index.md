@@ -37,6 +37,7 @@ All knowledge pages, entity pages, and concept pages synthesized from projects s
 ### Critiques & Evaluations
 - [Database Engineering Critique](critique_database_engineering.md) - Analysis of LLM over-engineering in QueryPat and the thinness of AI web writing, grounded in prompt archaeology values.
 - [Audience & Impact Evaluation](concept_dh_evaluation.md) - Evaluating how well the projects serve the triple audience of academics, gamers, and occult practitioners.
+- [DH Methodological Analysis](report_dh_project_analysis.md) - A structural and methodological critique of the projects focusing on ontology modeling, distant reading, and materiality.
 
 ### Sources
 *(List of raw sources or repositories ingested)*

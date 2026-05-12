@@ -51,3 +51,7 @@ Chronological, append-only record of operations performed on the wiki.
 ## [2026-05-11] synthesis | Authored Audience Evaluation
 - Authored `concept_dh_evaluation.md` critiquing how well the databases serve the triple audience of Academics, Gamers, and Practitioners.
 - Indexed the evaluation in the HTML website and `index.md`.
+
+## [2026-05-11] synthesis | Authored DH Methodological Analysis
+- Authored `report_dh_project_analysis.md` providing a strict DH critique of the corpus (ontology, textual transmission, IIIF standards, and distant reading).
+- Indexed the analysis in the HTML website and `index.md`.

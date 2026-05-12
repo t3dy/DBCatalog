@@ -55,3 +55,13 @@ Chronological, append-only record of operations performed on the wiki.
 ## [2026-05-11] synthesis | Authored DH Methodological Analysis
 - Authored `report_dh_project_analysis.md` providing a strict DH critique of the corpus (ontology, textual transmission, IIIF standards, and distant reading).
 - Indexed the analysis in the HTML website and `index.md`.
+
+## [2026-05-11] synthesis | Authored Digby, Scryfall, and NSFRIPPER Profiles
+- Authored `project_digby.md`, `project_alchemyscryfall.md`, and `project_nsfripper.md`.
+- Evaluated these projects as Procedural Engines and technical boundaries.
+- Added cards to the HTML dashboard.
+
+## [2026-05-11] synthesis | Authored Digby, Scryfall, and NSFRIPPER Profiles
+- Authored `project_digby.md`, `project_alchemyscryfall.md`, and `project_nsfripper.md`.
+- Evaluated these projects as Procedural Engines and technical boundaries.
+- Added cards to the HTML dashboard.

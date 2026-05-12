@@ -23,6 +23,9 @@ All knowledge pages, entity pages, and concept pages synthesized from projects s
 - [MarxistPortal](project_marxistportal.md) - Educational website curating the Marxist intellectual tradition.
 - [Shakespeare Sonnets](project_shakespeare.md) - DH site analyzing Shakespeare's 154 Sonnets with strict provenance.
 - [QueryPat (Philip K. Dick)](project_querypat.md) - React-based scholarly knowledge portal about Philip K. Dick.
+- [Digby Game](project_digby.md) - The interactive Kenelm Digby Almagest Laboratory engine.
+- [Alchemy Scryfall](project_alchemyscryfall.md) - Mapping MTG mechanics to alchemical stages.
+- [NSFRIPPER](project_nsfripper.md) - Konami 6502 audio driver reverse-engineering & Bach mashups.
 
 ### Meta & Reports
 - [How This Wiki Achieves Your Goals](report_wiki_utility.md) - A definitive report on the operational utility of the DBCatalog memory system.

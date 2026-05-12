@@ -29,6 +29,7 @@ All knowledge pages, entity pages, and concept pages synthesized from projects s
 
 ### Master Concepts & Architecture
 - [The Deckard Boundary](architecture_deckard_boundary.md) - The strict division of labor between Python and LLMs.
+- [Prompt Archaeology Machines](architecture_prompt_archaeology_machines.md) - Pipeline design for extracting game, app, and book ideas from LLM chats.
 - [Scholarly Writing & Voice](concept_scholarly_writing.md) - Global style guide ensuring critical-reportorial density and prohibiting the flattening of contradictions.
 
 ### Critiques

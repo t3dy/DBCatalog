@@ -35,3 +35,7 @@ Chronological, append-only record of operations performed on the wiki.
 ## [2026-05-11] synthesis | Authored Wiki Utility Report
 - Authored `report_wiki_utility.md` mapping the wiki's structure (Deckard Boundary, Scholar Templates, Prompt Archaeology) directly to the user's goals of defeating LLM drift and enforcing scholarly density.
 - Indexed the report in `index.md`.
+
+## [2026-05-11] synthesis | Authored Prompt Archaeology Machines
+- Authored `architecture_prompt_archaeology_machines.md` outlining the pipeline for extracting game, app, and book ideas from megabase LLM chats.
+- Indexed the new architecture document in `index.md`.

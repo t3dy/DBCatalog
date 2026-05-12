@@ -2,6 +2,9 @@
 
 Welcome to the **DBCatalog**, a personal knowledge base built using the [LLM-Wiki pattern popularized by Andrej Karpathy](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). This repository serves as the compounding "memory" layer for a series of complex Digital Humanities (DH) databases, React web portals, and unified Python indexing pipelines.
 
+> 🌟 **[Browse the Interactive Knowledge Portal](https://t3dy.github.io/DBCatalog/)** 🌟  
+> *A beautifully curated HTML gateway bridging all live database projects and their wiki summaries.*
+
 ## 🧠 The Method (Karpathy Pattern)
 
 Traditional retrieval-augmented generation (RAG) relies on an LLM scanning raw files from scratch on every prompt. The LLM-Wiki pattern changes the paradigm by "compiling" the raw sources into an organized, heavily interlinked markdown wiki. The LLM reads the raw data, synthesizes it, maintains cross-references, updates catalogs, and manages timelines.

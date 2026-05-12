@@ -3,7 +3,7 @@
 This document synthesizes the structural approaches taken across the entire DBCatalog ecosystem. While the underlying technology is consistently SQLite, your databases serve three radically different functions: **Knowledge Portals**, **Procedural Engines**, and **Social Megaphones**.
 
 ## 1. The Database as a Knowledge Portal (The Cathedral)
-**Projects**: `QueryPat`, `HermeticDB`, `AtalantaClaudiens`, `Shakespeare`, `RenMagDB`
+**Projects**: `QueryPat`, `HermeticDB`, `AtalantaClaudiens`, `Shakespeare`, `RenMagDB`, `DigbyDB` (Scholarship Repository)
 **Core Architecture**: SQLite → Python Build Pipeline → Static React/HTML
 
 ### Analysis & Insights
@@ -13,7 +13,7 @@ This document synthesizes the structural approaches taken across the entire DBCa
 * **Next Steps**: Shift the framing of these databases to "Reading Environments." Rely on the newly established Lint-and-Sample auditing pipeline to ensure the database favors quality over completion.
 
 ## 2. The Database as a Dungeon Master (The Engine)
-**Projects**: `MTGSLIDER`, `Digby-game`, `DOGSGAME`
+**Projects**: `MTGSLIDER`, `Digby-game` (Interactive Engine), `DOGSGAME`
 **Core Architecture**: SQLite + Dynamic State + LLM Context Injection
 
 ### Analysis & Insights

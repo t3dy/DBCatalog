@@ -39,3 +39,7 @@ Chronological, append-only record of operations performed on the wiki.
 ## [2026-05-11] synthesis | Authored Prompt Archaeology Machines
 - Authored `architecture_prompt_archaeology_machines.md` outlining the pipeline for extracting game, app, and book ideas from megabase LLM chats.
 - Indexed the new architecture document in `index.md`.
+
+## [2026-05-11] synthesis | Authored Auditing the Writing Strategy
+- Authored `concept_auditing_writing.md` defining a token-efficient Lint-and-Sample pipeline to audit LLM prose.
+- Added an explicit Auditing section to the HTML website and `index.md`.

@@ -32,6 +32,7 @@ All knowledge pages, entity pages, and concept pages synthesized from projects s
 - [Prompt Archaeology Machines](architecture_prompt_archaeology_machines.md) - Pipeline design for extracting game, app, and book ideas from LLM chats.
 - [Scholarly Writing & Voice](concept_scholarly_writing.md) - Global style guide ensuring critical-reportorial density and prohibiting the flattening of contradictions.
 - [Auditing the Writing](concept_auditing_writing.md) - Token-efficient pipeline for reviewing and elevating LLM prose across massive databases.
+- [Database Theories & Architecture Analysis](concept_database_theories.md) - Analysis of DBs functioning as Knowledge Portals, Procedural Engines, and Social Megaphones.
 
 ### Critiques
 - [Database Engineering & Web Writing Critique](critique_database_engineering.md) - Analysis of LLM over-engineering in QueryPat and the thinness of AI web writing, grounded in prompt archaeology values.

@@ -43,3 +43,7 @@ Chronological, append-only record of operations performed on the wiki.
 ## [2026-05-11] synthesis | Authored Auditing the Writing Strategy
 - Authored `concept_auditing_writing.md` defining a token-efficient Lint-and-Sample pipeline to audit LLM prose.
 - Added an explicit Auditing section to the HTML website and `index.md`.
+
+## [2026-05-11] synthesis | Authored Database Theories
+- Authored `concept_database_theories.md` classifying all projects into three distinct database theories: Knowledge Portals, Procedural Engines, and Social Megaphones.
+- Indexed the theory document in the HTML website and `index.md`.

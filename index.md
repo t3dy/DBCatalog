@@ -34,8 +34,9 @@ All knowledge pages, entity pages, and concept pages synthesized from projects s
 - [Auditing the Writing](concept_auditing_writing.md) - Token-efficient pipeline for reviewing and elevating LLM prose across massive databases.
 - [Database Theories & Architecture Analysis](concept_database_theories.md) - Analysis of DBs functioning as Knowledge Portals, Procedural Engines, and Social Megaphones.
 
-### Critiques
-- [Database Engineering & Web Writing Critique](critique_database_engineering.md) - Analysis of LLM over-engineering in QueryPat and the thinness of AI web writing, grounded in prompt archaeology values.
+### Critiques & Evaluations
+- [Database Engineering Critique](critique_database_engineering.md) - Analysis of LLM over-engineering in QueryPat and the thinness of AI web writing, grounded in prompt archaeology values.
+- [Audience & Impact Evaluation](concept_dh_evaluation.md) - Evaluating how well the projects serve the triple audience of academics, gamers, and occult practitioners.
 
 ### Sources
 *(List of raw sources or repositories ingested)*

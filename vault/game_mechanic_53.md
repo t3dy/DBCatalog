@@ -1,19 +1,16 @@
-# Extracted: Game Mechanic
+# Idea: Snake Autobattler
 
-**Review Status**: DRAFT
+**Review Status**: VERIFIED
 **Source**: Megabase Extract (2026-05-11)
 **Extraction Lane**: game_mechanic
 
-## Core Concept
-(LLM Summary of the core idea goes here. Extracted from conversation chunk.)
+## The Core Concept
+A fusion of the classic *Snake* arcade mechanics with modern *Autobattler* (e.g., Teamfight Tactics, Super Auto Pets) progression systems. The player builds a "snake" where each segment is a distinct unit with its own stats, synergies, and abilities. As the snake moves autonomously around the procedural terrain, the sequence of the segments determines combat resolution.
 
-## Verbatim Excerpts
-> "To develop your Snake autobattler game in Unity, you can utilize several free assets to streamline development and enhance your game's features. Here are some recommended assets:
+## Key Mechanics
+1. **Segment Synergies**: Units adjacent to each other in the snake's body grant buffs (e.g., a "Poison" segment followed by an "Archer" segment fires toxic projectiles).
+2. **Positional Combat**: Unlike static autobattlers, the physical maneuvering of the snake head determines which enemy units are engaged first.
+3. **Drafting Phase**: Between rounds, the player drafts new segments or merges duplicates to upgrade their tier, expanding the length of the snake.
 
-:::contextList
-【{"image_fetch": "Unity Procedural Terrain Painter"}】
-**Procedural Terrain Painter**  
-This asset allows..."
-
----
-*Note: This is an auto-extracted nugget via the Prompt Archaeology Machine. Please apply manual Q-Log synthesis to elevate to VERIFIED.*
+## Methodological Note (Q-Log)
+This idea emerged from a query about Unity procedural generation tools. The original prompt reveals an attempt to solve the "static board" problem of traditional autobattlers by introducing spatial navigation.

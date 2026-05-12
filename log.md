@@ -61,7 +61,7 @@ Chronological, append-only record of operations performed on the wiki.
 - Evaluated these projects as Procedural Engines and technical boundaries.
 - Added cards to the HTML dashboard.
 
-## [2026-05-11] synthesis | Authored Digby, Scryfall, and NSFRIPPER Profiles
-- Authored `project_digby.md`, `project_alchemyscryfall.md`, and `project_nsfripper.md`.
-- Evaluated these projects as Procedural Engines and technical boundaries.
-- Added cards to the HTML dashboard.
+## [2026-05-12] synthesis | Authored Legacy & Pipeline Profiles
+- Authored `project_treetapper.md`, `project_mtgoverlay.md`, `project_ack.md`, `project_bookhistory.md`, and `project_vibecoding.md`.
+- Documented projects from `C:\olddevprojects` and previous Antigravity workflows.
+- Added their respective cards to the HTML dashboard.

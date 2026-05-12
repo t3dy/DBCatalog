@@ -26,6 +26,11 @@ All knowledge pages, entity pages, and concept pages synthesized from projects s
 - [Digby Game](project_digby.md) - The interactive Kenelm Digby Almagest Laboratory engine.
 - [Alchemy Scryfall](project_alchemyscryfall.md) - Mapping MTG mechanics to alchemical stages.
 - [NSFRIPPER](project_nsfripper.md) - Konami 6502 audio driver reverse-engineering & Bach mashups.
+- [Almagest Construction Kit (ACK)](project_ack.md) - Automated RAG ideation toolkit and Document loader.
+- [Book History Pipelines](project_bookhistory.md) - Python scripts for deterministic Epub/PDF ingestion.
+- [Vibe Coding Garage (VCG)](project_vibecoding.md) - Discord bot integration and community social megaphone testbed.
+- [TreeTapper](project_treetapper.md) - Legacy mobile/clicker game and incremental UI experiment.
+- [MTG Overlay Suite](project_mtgoverlay.md) - Legacy streaming overlay architecture precursor to Scryfall.
 
 ### Meta & Reports
 - [How This Wiki Achieves Your Goals](report_wiki_utility.md) - A definitive report on the operational utility of the DBCatalog memory system.

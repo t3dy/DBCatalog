@@ -24,6 +24,9 @@ All knowledge pages, entity pages, and concept pages synthesized from projects s
 - [Shakespeare Sonnets](project_shakespeare.md) - DH site analyzing Shakespeare's 154 Sonnets with strict provenance.
 - [QueryPat (Philip K. Dick)](project_querypat.md) - React-based scholarly knowledge portal about Philip K. Dick.
 
+### Meta & Reports
+- [How This Wiki Achieves Your Goals](report_wiki_utility.md) - A definitive report on the operational utility of the DBCatalog memory system.
+
 ### Master Concepts & Architecture
 - [The Deckard Boundary](architecture_deckard_boundary.md) - The strict division of labor between Python and LLMs.
 - [Scholarly Writing & Voice](concept_scholarly_writing.md) - Global style guide ensuring critical-reportorial density and prohibiting the flattening of contradictions.

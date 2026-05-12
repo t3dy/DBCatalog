@@ -31,3 +31,7 @@ Chronological, append-only record of operations performed on the wiki.
 - Evaluated `C:\Dev\framework\new_project.py` and its templating system.
 - Authored `project_framework.md` with critiques and next steps concerning the over-automation of the Judgment Zone.
 - Added the Framework to `index.md` and `index.html`.
+
+## [2026-05-11] synthesis | Authored Wiki Utility Report
+- Authored `report_wiki_utility.md` mapping the wiki's structure (Deckard Boundary, Scholar Templates, Prompt Archaeology) directly to the user's goals of defeating LLM drift and enforcing scholarly density.
+- Indexed the report in `index.md`.

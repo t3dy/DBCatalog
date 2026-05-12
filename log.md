@@ -20,3 +20,9 @@ Chronological, append-only record of operations performed on the wiki.
 - Extracted summaries, data models, and theoretical approaches from `C:\Dev\SocialsDB`, `C:\Dev\MarxistPortal`, `C:\Dev\Shakespeare`, and `C:\querypat`.
 - Created `project_socialsdb.md`, `project_marxistportal.md`, `project_shakespeare.md`, and `project_querypat.md`.
 - Indexed the 4 new project pages in `index.md`.
+
+## [2026-05-11] synthesis | Extracted Master Concepts & Critiques
+- Extracted `concept_scholarly_writing.md` from the QueryPat scholar templates and Prompt Archaeology values.
+- Extracted `architecture_deckard_boundary.md` from the Shakespeare project rules.
+- Authored `critique_database_engineering.md` evaluating LLM over-engineering risks and web writing failures against the 10 values of prompt archaeology.
+- Updated `index.md` to catalog the new structural documents.

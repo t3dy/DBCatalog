@@ -26,3 +26,8 @@ Chronological, append-only record of operations performed on the wiki.
 - Extracted `architecture_deckard_boundary.md` from the Shakespeare project rules.
 - Authored `critique_database_engineering.md` evaluating LLM over-engineering risks and web writing failures against the 10 values of prompt archaeology.
 - Updated `index.md` to catalog the new structural documents.
+
+## [2026-05-11] ingest | Ingested DH Framework Scaffolder
+- Evaluated `C:\Dev\framework\new_project.py` and its templating system.
+- Authored `project_framework.md` with critiques and next steps concerning the over-automation of the Judgment Zone.
+- Added the Framework to `index.md` and `index.html`.

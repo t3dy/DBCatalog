@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBCatalog | Goals & Features Roadmap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+            --secondary: #ec4899;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: -20vh; left: -20vw;
+            width: 70vw; height: 70vw;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+            z-index: -1; pointer-events: none;
+            animation: pulse 15s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.1) translate(5%, 5%); }
+        }
+
+        header {
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            background: linear-gradient(to right, #38bdf8, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-links { margin-top: 1.5rem; }
+        .nav-links a { color: var(--accent); text-decoration: none; font-weight: 600; margin: 0 1rem; transition: color 0.3s; }
+        .nav-links a:hover { color: #f8fafc; }
+
+        main { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+
+        .ecosystem-goals {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .ecosystem-goals h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            color: #f8fafc;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .goal-list { list-style: none; }
+        .goal-list li {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        .goal-list li::before {
+            content: '🎯';
+            position: absolute;
+            left: 0; top: 2px;
+        }
+
+        .project-section {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            color: var(--accent);
+        }
+
+        .badge-portal { background: rgba(56, 189, 248, 0.2); color: #38bdf8; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;}
+        .badge-engine { background: rgba(236, 72, 153, 0.2); color: #ec4899; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;}
+        .badge-megaphone { background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem;}
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-block {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--text-muted);
+        }
+
+        .info-block.goals { border-left-color: #38bdf8; }
+        .info-block.features { border-left-color: #a855f7; }
+        .info-block.critique { border-left-color: #f59e0b; }
+        .info-block.insights { border-left-color: #ec4899; }
+        .info-block.next-steps { border-left-color: #10b981; grid-column: 1 / -1; background: rgba(16, 185, 129, 0.1);}
+
+        .info-block h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-block ul {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .info-block li { margin-bottom: 0.5rem; }
+
+        @media (max-width: 768px) {
+            .grid-layout { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+
+    <header>
+        <h1>Goals & Features Roadmap</h1>
+        <p>A structured breakdown of objectives, current features, honest critiques, and immediate next steps for the DBCatalog ecosystem.</p>
+        <div class="nav-links">
+            <a href="index.html">← Back to Portal</a>
+            <a href="index.md">System Index</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="ecosystem-goals">
+            <h2>Ecosystem High-Level Goals</h2>
+            <ul class="goal-list">
+                <li><strong>The Deckard Boundary:</strong> Strictly isolate subjective AI writing from hard, deterministic Python state management. Stop the AI from hallucinating databases.</li>
+                <li><strong>Academic Rigor vs. Playability:</strong> Bridge the gap between the "Cathedral" (rigid scholarly reading environments) and the "Laboratory" (playable, interactive digital humanities tools).</li>
+                <li><strong>No Wheels Reinvented:</strong> Continuously adapt proven methodologies from leading external DH projects (e.g., Linked Open Data, Diplomatic transcriptions, statistical network graphs).</li>
+                <li><strong>Zero-Token Linting:</strong> Automatically scrub "AI slop" from our generated writing to maintain a highly dense, critical-reportorial scholarly voice.</li>
+            </ul>
+        </div>
+
+        <div class="project-section">
+
+            <!-- DIGBY GAME -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2 class="project-title">Digby Game</h2>
+                    <span class="badge-engine">Procedural Engine</span>
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.1rem;">An interactive Digital Humanities laboratory engine focused on Sir Kenelm Digby, alchemy, and 17th-century trade.</p>
+                
+                <div class="grid-layout">
+                    <div class="info-block goals">
+                        <h3>🎯 Core Goals</h3>
+                        <ul>
+                            <li>Allow players to experience Renaissance material science by interactively running alchemical recipes.</li>
+                            <li>Ground all gameplay mechanics strictly in academic texts housed within `RenMagDB`.</li>
+                            <li>Develop a playable UI that doesn't feel like a standard academic portal.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-block features">
+                        <h3>⚙️ Current Features</h3>
+                        <ul>
+                            <li>`reagents.json` and `commodities.json` structured ontologies.</li>
+                            <li>Strict Deckard Boundary implementation for state changes.</li>
+                            <li>Legacy UI state-management scavenged from the `TreeTapper` incremental engine.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block critique">
+                        <h3>⚠️ Critique & Weaknesses</h3>
+                        <ul>
+                            <li>Game states currently risk amnesia if the AI isn't forced to write back to the deterministic Python scripts.</li>
+                            <li>The user interface is too heavily reliant on text boxes rather than interactive spatial elements.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block insights">
+                        <h3>💡 Key Insights</h3>
+                        <ul>
+                            <li>As seen in *The Chymistry of Isaac Newton*, recreating recipes physically/digitally is a valid form of academic scholarship, not just a game.</li>
+                            <li>The "Earnestness through Irony" approach makes dense history accessible.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block next-steps">
+                        <h3>🚀 Actionable Next Steps</h3>
+                        <ul>
+                            <li>Wire the `locations.json` to Linked Open Data (LOD) URIs for spatial mapping.</li>
+                            <li>Implement "Citational Tethers" to explicitly surface the academic source of an item when a player hovers over it in their inventory.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUERYPAT -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2 class="project-title">QueryPat</h2>
+                    <span class="badge-portal">Knowledge Portal</span>
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.1rem;">The definitive scholarly reading environment for the works and theology of Philip K. Dick.</p>
+                
+                <div class="grid-layout">
+                    <div class="info-block goals">
+                        <h3>🎯 Core Goals</h3>
+                        <ul>
+                            <li>"Lower heaven into reach" by making PKD's massively complex *Exegesis* searchable and structured.</li>
+                            <li>Map out the arguments between different literary scholars regarding PKD's work.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-block features">
+                        <h3>⚙️ Current Features</h3>
+                        <ul>
+                            <li>React/HTML static frontend.</li>
+                            <li>Rigid "Scholar Profiles" mapping intellectual lineage and specific literary arguments.</li>
+                            <li>Relational database connecting chapters to specific theological concepts.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block critique">
+                        <h3>⚠️ Critique & Weaknesses</h3>
+                        <ul>
+                            <li><strong>The Over-Engineering Trap:</strong> The schema is too relational, forcing the AI to hallucinate filler text to satisfy the database joins.</li>
+                            <li>Artificially separates his sci-fi fiction from his lived theological paranoia (2-3-74).</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block insights">
+                        <h3>💡 Key Insights</h3>
+                        <ul>
+                            <li>Academic writing must *never flatten contradictions*. If two scholars disagree, the portal must explicitly highlight the fight rather than synthesizing a middle ground.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block next-steps">
+                        <h3>🚀 Actionable Next Steps</h3>
+                        <ul>
+                            <li>Add a `thematic_bleed` entity linking the 2-3-74 visions directly back to his earlier fiction.</li>
+                            <li>Run the zero-token `lint_writing.py` to scrub generic "AI slop" from the scholar profiles.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOCIALSDB -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2 class="project-title">SocialsDB / Megabase</h2>
+                    <span class="badge-megaphone">Social Megaphone</span>
+                </div>
+                <p style="color: var(--text-muted); font-size: 1.1rem;">A massive data lake containing millions of personal messages and AI chat logs used for insight extraction.</p>
+                
+                <div class="grid-layout">
+                    <div class="info-block goals">
+                        <h3>🎯 Core Goals</h3>
+                        <ul>
+                            <li>Automate the publishing pipeline for Digital Humanities insights.</li>
+                            <li>Treat personal chat logs as an archaeological site for intellectual autoethnography.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-block features">
+                        <h3>⚙️ Current Features</h3>
+                        <ul>
+                            <li>3.9M row ingestion engine mapping 11 communication platforms.</li>
+                            <li>SQLite Full-Text Search (FTS5) capabilities.</li>
+                            <li>Basic prompt archaeology "Nugget Machines" for idea extraction.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block critique">
+                        <h3>⚠️ Critique & Weaknesses</h3>
+                        <ul>
+                            <li>The extraction from "Archive" to "Social Post" is entirely manual. The insights stay buried unless manually queried.</li>
+                            <li>Signal-to-noise ratio is too high for ad-hoc searching.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block insights">
+                        <h3>💡 Key Insights</h3>
+                        <ul>
+                            <li>The system needs persistent topic-modeling visualizations to graph intellectual focus over time, moving beyond simple keyword extraction.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-block next-steps">
+                        <h3>🚀 Actionable Next Steps</h3>
+                        <ul>
+                            <li>Build the automated "Social Megaphone" pipeline to scan recent chats, auto-draft posts into the specific voice, and stage them in a `social_drafts` table.</li>
+                            <li>Pipe the Vibe Coding Garage Discord bot directly into this database to graph community sentiment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

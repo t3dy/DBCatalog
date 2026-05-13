@@ -23,7 +23,9 @@ A Python-based CLI tool (`new_project.py`) designed to automatically scaffold ne
 1. **Enforce the Deckard Boundary**: Update the `template/scripts/seed_from_corpus.py` to ensure that any LLM-generated entries are strictly flagged as `review_status="DRAFT"`.
 2. **Inject the Master Style Guide**: The scaffolding should automatically copy `concept_scholarly_writing.md` into the new project's `.claude/` or `docs/` directory so that any future LLM runs inherit the critical-reportorial voice.
 3. **Shift the Goal**: The framework should be framed not as a "one-click site builder," but as a "one-click reading environment." The goal is to get the PDFs into SQLite quickly so the manual, iterative "Q-log" interpretation can begin.
+4. **Implement UI/UX Standards**: Integrate the templates and styles defined in the [[Frontend Patterns & UI Framework]] to ensure every generated project immediately utilizes the required sleek, dark-mode, relational browsing aesthetic.
 
 ## Related Entities
 - [[Deckard Boundary]]
 - [[Database Engineering Critique]]
+- [[Frontend Patterns & UI Framework]] (`architecture_frontend_patterns.md`)

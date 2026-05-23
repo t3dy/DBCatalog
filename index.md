@@ -40,6 +40,7 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 - **[CrowleyDB](project_crowleydb.md)**: Knowledge portal cataloging Aleister Crowley's corpus, Thelemic doctrine, and 777 correspondence tables.
 - **[WitchcraftStudiesDB](project_witchcraftstudies.md)**: Scholarly DH corpus tracking European witchcraft historiography from trial records to demonological treatises.
 - **[AlchemyTimelineMap](project_alchemytimelinemap.md)**: Interactive D3.js visualization mapping 2,500 years of alchemical transmission across traditions and eras.
+- **[WitcherFolkloreDB](project_witcherfolklore.md)**: Fictional-Historical Bridge tracing Witcher monsters, rituals, and folk magic back to documented Slavic folklore and medieval bestiary sources.
 
 ### Meta & Reports
 - **[How This Wiki Achieves Your Goals](report_wiki_utility.md)**: A definitive report on the operational utility of the DBCatalog memory system.
@@ -52,6 +53,7 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 - **[Database Theories & Architecture Analysis](concept_database_theories.md)**: Structural analysis of Knowledge Portals, Procedural Engines, and Social Megaphones.
 - **[Frontend Patterns & UI Framework](architecture_frontend_patterns.md)**: Styling rules, relational browsing UX, and scholarly card templates.
 - **[Prior Art & Ecosystem Influences](concept_prior_art.md)**: Analysis of external DH projects and how they influence our architecture.
+- **[New Directions: Context Engineering, Coding & Data](architecture_new_directions.md)**: Synthesis of emerging patterns across the ecosystem — entity federation, D3.js visualization-as-argument, geospatial modeling, the Fourth Database Theory (Fictional-Historical Bridge), and alternative architectural approaches.
 
 ### Critiques & Evaluations
 - **[Database Engineering Critique](critique_database_engineering.md)**: Analysis of LLM over-engineering and the thinness of AI web writing.

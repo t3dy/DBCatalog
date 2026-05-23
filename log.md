@@ -71,3 +71,10 @@ Chronological, append-only record of operations performed on the wiki.
 - Authored `project_witchcraftstudies.md`: DH corpus for European witchcraft historiography; 500+ trial records, 45 demonological treatises, Leaflet.js geospatial mapping (first geospatial project in catalog).
 - Authored `project_alchemytimelinemap.md`: D3.js interactive timeline mapping 2,500 years of alchemical transmission; introduces cross-portal entity resolution with HermeticDB and RenMagDB (first federated data layer in ecosystem).
 - Indexed all three projects in `index.md` and added cards 19–21 to `index.html`.
+
+## [2026-05-23] synthesis | Authored New Directions Architecture & WitcherFolkloreDB
+- Authored `architecture_new_directions.md`: Full synthesis of context engineering, coding environment, and data engineering directions across the ecosystem. Covers entity federation (`entities.db`), D3.js visualization-as-argument, geospatial modeling, FTS5 → semantic search evolution, the Engine + Portal dual-frontend, and alternative approaches (Neo4j, SQLite-vec, Wikidata QIDs, IIIF, DuckDB, Observable, Svelte).
+- Defined the **Fourth Database Theory**: the Fictional-Historical Bridge — comparative citation chain projects (Fictional Entity → Folklore Source → Medieval Text) with a Three-Field Citation Requirement.
+- Authored `project_witcherfolklore.md`: Fictional-Historical Bridge tracing Witcher monsters and folk practices to Slavic folklore, medieval Polish chronicles, and Latin bestiary traditions. Introduces three-tier `citation_chains` data model; cross-linked to WitchcraftStudiesDB, RenMagDB, and CrowleyDB.
+- Added card 22 (WitcherFolkloreDB) and New Directions rabbit-hole section to `index.html`.
+- Indexed both new documents in `index.md` under Projects and Master Concepts & Architecture.

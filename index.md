@@ -55,6 +55,8 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 - **[Prior Art & Ecosystem Influences](concept_prior_art.md)**: Analysis of external DH projects and how they influence our architecture.
 - **[New Directions: Context Engineering, Coding & Data](architecture_new_directions.md)**: Synthesis of emerging patterns across the ecosystem — entity federation, D3.js visualization-as-argument, geospatial modeling, the Fourth Database Theory (Fictional-Historical Bridge), and alternative architectural approaches.
 
+- **[Beginner's Glossary](concept_beginners_glossary.md)**: Plain-English definitions for every CS, DH, and wiki-specific term — written for a beginning CS student, with real examples from the catalog.
+
 ### Critiques & Evaluations
 - **[Database Engineering Critique](critique_database_engineering.md)**: Analysis of LLM over-engineering and the thinness of AI web writing.
 - **[Audience & Impact Evaluation](concept_dh_evaluation.md)**: Evaluating alignment with academics, gamers, and occult practitioners.

@@ -78,3 +78,8 @@ Chronological, append-only record of operations performed on the wiki.
 - Authored `project_witcherfolklore.md`: Fictional-Historical Bridge tracing Witcher monsters and folk practices to Slavic folklore, medieval Polish chronicles, and Latin bestiary traditions. Introduces three-tier `citation_chains` data model; cross-linked to WitchcraftStudiesDB, RenMagDB, and CrowleyDB.
 - Added card 22 (WitcherFolkloreDB) and New Directions rabbit-hole section to `index.html`.
 - Indexed both new documents in `index.md` under Projects and Master Concepts & Architecture.
+
+## [2026-05-23] synthesis | Authored Beginner's Glossary
+- Authored `concept_beginners_glossary.md`: Plain-English definitions for every CS, DH, and wiki-specific term across the full catalog. Seven parts covering core CS building blocks, the data pipeline, the frontend tech stack, AI/LLM terms, this wiki's special vocabulary, digital humanities terminology, and advanced architecture concepts. Every definition includes a real example from a catalog project.
+- Added "New Here? Start With the Glossary" rabbit-hole section to `index.html` as the first rabbit-hole entry.
+- Indexed in `index.md` under Master Concepts & Architecture.

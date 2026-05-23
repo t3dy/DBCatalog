@@ -65,3 +65,9 @@ Chronological, append-only record of operations performed on the wiki.
 - Authored `project_treetapper.md`, `project_mtgoverlay.md`, `project_ack.md`, `project_bookhistory.md`, and `project_vibecoding.md`.
 - Documented projects from `C:\olddevprojects` and previous Antigravity workflows.
 - Added their respective cards to the HTML dashboard.
+
+## [2026-05-23] ingest | Ingested CrowleyDB, WitchcraftStudiesDB, AlchemyTimelineMap
+- Authored `project_crowleydb.md`: Knowledge portal for Aleister Crowley's corpus, Thelemic doctrine, and 777 correspondence tables. Strict Deckard Boundary on all symbolic attributions.
+- Authored `project_witchcraftstudies.md`: DH corpus for European witchcraft historiography; 500+ trial records, 45 demonological treatises, Leaflet.js geospatial mapping (first geospatial project in catalog).
+- Authored `project_alchemytimelinemap.md`: D3.js interactive timeline mapping 2,500 years of alchemical transmission; introduces cross-portal entity resolution with HermeticDB and RenMagDB (first federated data layer in ecosystem).
+- Indexed all three projects in `index.md` and added cards 19–21 to `index.html`.

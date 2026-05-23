@@ -37,6 +37,9 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 - **[Vibe Coding Garage (VCG)](project_vibecoding.md)**: Discord bot integration and community social megaphone testbed.
 - **[TreeTapper](project_treetapper.md)**: Legacy mobile/clicker game; precursor for UI state management.
 - **[MTG Overlay Suite](project_mtgoverlay.md)**: Legacy streaming overlay architecture; precursor to Alchemy Scryfall.
+- **[CrowleyDB](project_crowleydb.md)**: Knowledge portal cataloging Aleister Crowley's corpus, Thelemic doctrine, and 777 correspondence tables.
+- **[WitchcraftStudiesDB](project_witchcraftstudies.md)**: Scholarly DH corpus tracking European witchcraft historiography from trial records to demonological treatises.
+- **[AlchemyTimelineMap](project_alchemytimelinemap.md)**: Interactive D3.js visualization mapping 2,500 years of alchemical transmission across traditions and eras.
 
 ### Meta & Reports
 - **[How This Wiki Achieves Your Goals](report_wiki_utility.md)**: A definitive report on the operational utility of the DBCatalog memory system.

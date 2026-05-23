@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}DH Admin{% endblock %}</title>
+  <style>
+    :root {
+      --bg:        #0f172a;
+      --surface:   #1e293b;
+      --border:    #334155;
+      --text:      #f1f5f9;
+      --muted:     #94a3b8;
+      --accent:    #38bdf8;
+      --success:   #10b981;
+      --warning:   #f59e0b;
+      --danger:    #ef4444;
+      --draft:     #f59e0b;
+      --reviewed:  #38bdf8;
+      --verified:  #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Layout */
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .topbar-title { font-weight: 700; font-size: 1rem; color: var(--accent); }
+    .topbar-breadcrumb { color: var(--muted); font-size: 0.85rem; }
+    .topbar-breadcrumb a { color: var(--muted); }
+    .topbar-breadcrumb a:hover { color: var(--text); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+    /* Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; text-decoration: none; }
+    .btn-primary  { background: var(--accent);   color: #0f172a; }
+    .btn-success  { background: var(--success);  color: #fff; }
+    .btn-warning  { background: var(--warning);  color: #0f172a; }
+    .btn-danger   { background: var(--danger);   color: #fff; }
+    .btn-ghost    { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+    .btn-sm { padding: 0.25rem 0.6rem; font-size: 0.78rem; }
+
+    /* Badges */
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .badge-draft    { background: rgba(245,158,11,0.2);  color: var(--draft); }
+    .badge-reviewed { background: rgba(56,189,248,0.2);  color: var(--reviewed); }
+    .badge-verified { background: rgba(16,185,129,0.2);  color: var(--verified); }
+    .badge-low      { background: rgba(239,68,68,0.15);  color: var(--danger); }
+    .badge-medium   { background: rgba(245,158,11,0.15); color: var(--warning); }
+    .badge-high     { background: rgba(16,185,129,0.15); color: var(--success); }
+
+    /* Forms */
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--muted); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+      font-family: inherit;
+      transition: border-color 0.15s;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .form-textarea { min-height: 120px; resize: vertical; line-height: 1.6; }
+    .form-hint { font-size: 0.78rem; color: var(--muted); margin-top: 0.3rem; }
+
+    /* Button group (review status / confidence) */
+    .btn-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .btn-group input[type=radio] { display: none; }
+    .btn-group label {
+      padding: 0.35rem 0.9rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: all 0.15s;
+    }
+    .btn-group input[type=radio]:checked + label { border-color: var(--accent); color: var(--accent); background: rgba(56,189,248,0.1); }
+
+    /* Tag chips */
+    .tag-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; }
+    .tag-chip {
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+      background: rgba(56,189,248,0.1);
+      border: 1px solid rgba(56,189,248,0.3);
+      font-size: 0.78rem;
+      color: var(--accent);
+      cursor: pointer;
+      transition: all 0.15s;
+      user-select: none;
+    }
+    .tag-chip.active { background: var(--accent); color: #0f172a; border-color: var(--accent); }
+
+    /* Alerts */
+    .alert {
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      font-size: 0.88rem;
+    }
+    .alert-success { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); color: var(--success); }
+    .alert-error   { background: rgba(239,68,68,0.1);  border: 1px solid rgba(239,68,68,0.3);  color: var(--danger); }
+    .alert-warning { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3); color: var(--warning); }
+
+    /* Table */
+    .entity-table { width: 100%; border-collapse: collapse; }
+    .entity-table th {
+      text-align: left; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--muted); padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .entity-table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid rgba(51,65,85,0.5); }
+    .entity-table tr:hover td { background: rgba(255,255,255,0.02); }
+
+    /* Section header */
+    .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .section-title { font-size: 1rem; font-weight: 700; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+
+    /* Relationship checkboxes */
+    .rel-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.4rem; }
+    .rel-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; }
+    .rel-item input[type=checkbox] { accent-color: var(--accent); width: 15px; height: 15px; }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-title">⚙ DH Admin</span>
+  <span class="topbar-breadcrumb">{% block breadcrumb %}<a href="/">Projects</a>{% endblock %}</span>
+</div>
+
+<div class="container">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endwith %}
+
+  {% block content %}{% endblock %}
+</div>
+
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

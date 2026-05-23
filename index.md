@@ -41,6 +41,7 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 - **[WitchcraftStudiesDB](project_witchcraftstudies.md)**: Scholarly DH corpus tracking European witchcraft historiography from trial records to demonological treatises.
 - **[AlchemyTimelineMap](project_alchemytimelinemap.md)**: Interactive D3.js visualization mapping 2,500 years of alchemical transmission across traditions and eras.
 - **[WitcherFolkloreDB](project_witcherfolklore.md)**: Fictional-Historical Bridge tracing Witcher monsters, rituals, and folk magic back to documented Slavic folklore and medieval bestiary sources.
+- **[DH Admin Panel](project_dhadmin.md)**: Local Flask admin interface for editing prose, tags, relationships, and review status across all DH project SQLite databases. Runs at localhost:5001.
 
 ### Meta & Reports
 - **[How This Wiki Achieves Your Goals](report_wiki_utility.md)**: A definitive report on the operational utility of the DBCatalog memory system.

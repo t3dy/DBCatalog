@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}{{ proj.name }} — DH Admin{% endblock %}
+
+{% block breadcrumb %}
+  <a href="/">Projects</a> / <span style="color:var(--text)">{{ proj.name }}</span>
+{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <h1 class="section-title">{{ proj.name }}</h1>
+  <form method="post" action="/rebuild/{{ project_key }}">
+    <button type="submit" class="btn btn-warning btn-sm">⚙ Rebuild Site</button>
+  </form>
+</div>
+
+{% for table_key, data in tables_data.items() %}
+<div class="card" style="margin-bottom:1.5rem;">
+  <div class="section-header" style="margin-bottom:0.75rem;">
+    <span class="section-title">{{ data.config.display_name }}</span>
+    <span style="font-size:0.8rem; color:var(--muted)">{{ data.rows|length }} rows (max 100 shown)</span>
+  </div>
+
+  {% if data.rows %}
+  <table class="entity-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>{{ data.config.display_field | capitalize }}</th>
+        <th>Status</th>
+        <th>Confidence</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in data.rows %}
+      <tr>
+        <td style="color:var(--muted); font-size:0.8rem;">{{ row['id'] }}</td>
+        <td>{{ row[data.config.display_field] }}</td>
+        <td>
+          {% set rs = row['review_status'] | default('DRAFT') %}
+          {% if rs == 'Verified' %}
+            <span class="badge badge-verified">{{ rs }}</span>
+          {% elif rs == 'Reviewed' %}
+            <span class="badge badge-reviewed">{{ rs }}</span>
+          {% else %}
+            <span class="badge badge-draft">{{ rs }}</span>
+          {% endif %}
+        </td>
+        <td>
+          {% set conf = row['confidence'] | default('MEDIUM') %}
+          {% if conf == 'HIGH' %}
+            <span class="badge badge-high">{{ conf }}</span>
+          {% elif conf == 'MEDIUM' %}
+            <span class="badge badge-medium">{{ conf }}</span>
+          {% else %}
+            <span class="badge badge-low">{{ conf }}</span>
+          {% endif %}
+        </td>
+        <td>
+          <a href="/edit/{{ project_key }}/{{ table_key }}/{{ row['id'] }}" class="btn btn-ghost btn-sm">Edit</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+    <p style="color:var(--muted); font-size:0.85rem;">No rows found in this table.</p>
+  {% endif %}
+</div>
+{% endfor %}
+{% endblock %}

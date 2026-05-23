@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}DH Admin — Projects{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <h1 class="section-title">Projects</h1>
+</div>
+
+{% for item in projects %}
+{% set proj = item.proj %}
+<div class="card">
+  <div style="display:flex; align-items:center; justify-content:space-between;">
+    <div>
+      <div class="card-title">{{ proj.name }}</div>
+      <div style="font-size:0.82rem; color:var(--muted); margin-top:0.2rem;">
+        {{ proj.db_path }}
+        {% if not item.db_exists %}
+          &nbsp;<span class="badge badge-draft">DB NOT FOUND</span>
+        {% endif %}
+      </div>
+      <div style="font-size:0.82rem; color:var(--muted); margin-top:0.25rem;">
+        Tables: {% for t in proj.tables %}
+          <span style="color:var(--text)">{{ proj.tables[t].display_name }}</span>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div style="display:flex; gap:0.5rem; align-items:center;">
+      {% if item.db_exists %}
+        <a href="/project/{{ item.key }}" class="btn btn-primary">Browse</a>
+        <form method="post" action="/rebuild/{{ item.key }}" style="display:inline;">
+          <button type="submit" class="btn btn-ghost">Rebuild Site</button>
+        </form>
+      {% else %}
+        <span style="font-size:0.8rem; color:var(--muted)">Database not found at configured path</span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+<div style="margin-top:2rem; padding:1rem; background:rgba(56,189,248,0.05); border:1px solid rgba(56,189,248,0.15); border-radius:8px; font-size:0.82rem; color:var(--muted);">
+  To add a project, edit <code>admin/config.json</code> and add an entry under <code>"projects"</code>.
+  Map the <code>db_path</code> to your SQLite file and <code>rebuild_script</code> to your <code>build_site.py</code>.
+</div>
+{% endblock %}

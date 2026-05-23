@@ -1,0 +1,120 @@
+{
+  "projects": {
+    "renmagdb": {
+      "name": "RenMagDB",
+      "db_path": "C:/Dev/renaissance magic/renmagdb.db",
+      "rebuild_script": "C:/Dev/renaissance magic/build_site.py",
+      "tables": {
+        "figures": {
+          "display_name": "Figures",
+          "display_field": "name",
+          "editable_fields": [
+            {"name": "description",       "label": "Description",        "type": "textarea"},
+            {"name": "central_claim",     "label": "Central Claim",      "type": "textarea"},
+            {"name": "scholarly_lineage", "label": "Scholarly Lineage",  "type": "textarea"},
+            {"name": "disputes",          "label": "Disputes",           "type": "textarea"},
+            {"name": "quotable_evidence", "label": "Quotable Evidence",  "type": "textarea"}
+          ],
+          "tag_fields": [
+            {
+              "name": "tradition", "label": "Tradition", "type": "tags",
+              "options": ["Hermeticism", "Kabbalah", "Neoplatonism", "Enochian", "Alchemy", "Astrology"]
+            },
+            {
+              "name": "period", "label": "Period", "type": "select",
+              "options": ["Antiquity", "Medieval", "Renaissance", "Early Modern", "Modern"]
+            }
+          ],
+          "review_field": "review_status",
+          "confidence_field": "confidence",
+          "relationships": [
+            {
+              "name": "Concepts",
+              "table": "concepts",
+              "display_field": "name",
+              "type": "junction",
+              "junction_table": "figure_concepts",
+              "source_id": "figure_id",
+              "target_id": "concept_id"
+            }
+          ]
+        },
+        "terms": {
+          "display_name": "Dictionary Terms",
+          "display_field": "term",
+          "editable_fields": [
+            {"name": "definition",   "label": "Definition",    "type": "textarea"},
+            {"name": "etymology",    "label": "Etymology",     "type": "text"},
+            {"name": "usage_note",   "label": "Usage Note",    "type": "textarea"}
+          ],
+          "tag_fields": [
+            {
+              "name": "language", "label": "Language", "type": "select",
+              "options": ["Latin", "Greek", "Hebrew", "Arabic", "English", "Italian"]
+            }
+          ],
+          "review_field": "review_status",
+          "confidence_field": "confidence",
+          "relationships": []
+        }
+      }
+    },
+    "hermeticdb": {
+      "name": "HermeticDB (EmeraldTablet)",
+      "db_path": "C:/Dev/EmeraldTablet/emerald_tablet.db",
+      "rebuild_script": "C:/Dev/EmeraldTablet/build_site.py",
+      "tables": {
+        "figures": {
+          "display_name": "Figures",
+          "display_field": "name",
+          "editable_fields": [
+            {"name": "description",      "label": "Description",       "type": "textarea"},
+            {"name": "contribution",     "label": "Contribution",      "type": "textarea"},
+            {"name": "primary_sources",  "label": "Primary Sources",   "type": "textarea"}
+          ],
+          "tag_fields": [
+            {
+              "name": "tradition", "label": "Tradition", "type": "tags",
+              "options": ["Hermetic", "Neoplatonic", "Alchemical", "Gnostic", "Islamic", "Christian"]
+            },
+            {
+              "name": "era", "label": "Era", "type": "select",
+              "options": ["Antiquity", "Late Antique", "Islamic Golden Age", "Medieval", "Renaissance"]
+            }
+          ],
+          "review_field": "review_status",
+          "confidence_field": "confidence",
+          "relationships": [
+            {
+              "name": "Related Texts",
+              "table": "texts",
+              "display_field": "title",
+              "type": "junction",
+              "junction_table": "figure_texts",
+              "source_id": "figure_id",
+              "target_id": "text_id"
+            }
+          ]
+        },
+        "claims": {
+          "display_name": "Claims",
+          "display_field": "claim_text",
+          "editable_fields": [
+            {"name": "claim_text",    "label": "Claim",           "type": "textarea"},
+            {"name": "context",       "label": "Context",         "type": "textarea"},
+            {"name": "citation",      "label": "Citation",        "type": "text"}
+          ],
+          "tag_fields": [
+            {
+              "name": "claim_type", "label": "Claim Type", "type": "select",
+              "options": ["Transmission", "Attribution", "Influence", "Translation", "Interpretation"]
+            }
+          ],
+          "review_field": "review_status",
+          "confidence_field": "confidence",
+          "relationships": []
+        }
+      }
+    }
+  }
+}

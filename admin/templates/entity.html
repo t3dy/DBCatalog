@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% block title %}Edit #{{ entity['id'] }} — {{ proj.name }}{% endblock %}
+
+{% block breadcrumb %}
+  <a href="/">Projects</a> /
+  <a href="/project/{{ project_key }}">{{ proj.name }}</a> /
+  <span style="color:var(--text)">{{ table_cfg.display_name }} #{{ entity['id'] }}</span>
+{% endblock %}
+
+{% block content %}
+<div class="section-header">
+  <h1 class="section-title">
+    {{ entity[table_cfg.display_field] or ('Entry #' ~ entity['id']) }}
+  </h1>
+  <span style="font-size:0.8rem; color:var(--muted)">{{ table_cfg.display_name }} · id {{ entity['id'] }}</span>
+</div>
+
+<form method="POST">
+
+  {# ── Prose + text fields ───────────────────────────────────────────────── #}
+  {% if table_cfg.editable_fields %}
+  <div class="card">
+    <div class="card-title" style="margin-bottom:1rem;">Content</div>
+    {% for field in table_cfg.editable_fields %}
+    <div class="form-group">
+      <label class="form-label">{{ field.label }}</label>
+      {% if field.type == 'textarea' %}
+        <textarea class="form-textarea" name="{{ field.name }}" rows="6">{{ entity[field.name] or '' }}</textarea>
+      {% else %}
+        <input class="form-input" type="text" name="{{ field.name }}" value="{{ entity[field.name] or '' }}">
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {# ── Tag fields ────────────────────────────────────────────────────────── #}
+  {% if table_cfg.tag_fields %}
+  <div class="card">
+    <div class="card-title" style="margin-bottom:1rem;">Tags &amp; Metadata</div>
+    {% for field in table_cfg.tag_fields %}
+    <div class="form-group">
+      <label class="form-label">{{ field.label }}</label>
+      {% if field.type == 'tags' %}
+        {# Rendered as clickable chips + a hidden comma-separated input #}
+        {% set current_tags = (entity[field.name] or '').split(',') | map('trim') | list %}
+        <div class="tag-chips" id="chips-{{ field.name }}">
+          {% for opt in field.options %}
+            <span class="tag-chip {% if opt in current_tags %}active{% endif %}"
+                  data-field="{{ field.name }}"
+                  data-value="{{ opt }}"
+                  onclick="toggleChip(this)">
+              {{ opt }}
+            </span>
+          {% endfor %}
+        </div>
+        {# The hidden input holds the comma-separated value submitted with the form #}
+        <input type="hidden" name="{{ field.name }}" id="hidden-{{ field.name }}"
+               value="{{ entity[field.name] or '' }}">
+        <div class="form-hint">Click to toggle. You can also type directly in the field below.</div>
+        <input class="form-input" type="text"
+               id="text-{{ field.name }}"
+               value="{{ entity[field.name] or '' }}"
+               placeholder="Or type comma-separated tags"
+               style="margin-top:0.5rem;"
+               oninput="syncChipsFromText(this, '{{ field.name }}')">
+      {% else %}
+        <select class="form-select" name="{{ field.name }}">
+          <option value="">— select —</option>
+          {% for opt in field.options %}
+            <option value="{{ opt }}" {% if entity[field.name] == opt %}selected{% endif %}>{{ opt }}</option>
+          {% endfor %}
+        </select>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {# ── Review status + confidence ────────────────────────────────────────── #}
+  {% set review_field = table_cfg.get('review_field') %}
+  {% set conf_field   = table_cfg.get('confidence_field') %}
+  {% if review_field or conf_field %}
+  <div class="card">
+    <div class="card-title" style="margin-bottom:1rem;">Provenance</div>
+
+    {% if review_field %}
+    <div class="form-group">
+      <label class="form-label">Review Status</label>
+      <div class="btn-group">
+        {% for status in review_statuses %}
+        <input type="radio" name="{{ review_field }}" id="rs-{{ status }}"
+               value="{{ status }}" {% if entity[review_field] == status %}checked{% endif %}>
+        <label for="rs-{{ status }}"
+               style="{% if status == 'DRAFT' %}color:var(--draft){% elif status == 'Reviewed' %}color:var(--reviewed){% else %}color:var(--verified){% endif %}">
+          {{ status }}
+        </label>
+        {% endfor %}
+      </div>
+      <div class="form-hint">Saving this form will not automatically change the status — you control it here.</div>
+    </div>
+    {% endif %}
+
+    {% if conf_field %}
+    <div class="form-group">
+      <label class="form-label">Confidence</label>
+      <div class="btn-group">
+        {% for level in confidence_levels %}
+        <input type="radio" name="{{ conf_field }}" id="cf-{{ level }}"
+               value="{{ level }}" {% if entity[conf_field] == level %}checked{% endif %}>
+        <label for="cf-{{ level }}"
+               style="{% if level == 'HIGH' %}color:var(--verified){% elif level == 'MEDIUM' %}color:var(--warning){% else %}color:var(--danger){% endif %}">
+          {{ level }}
+        </label>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {# ── Relationships ─────────────────────────────────────────────────────── #}
+  {% if relationships %}
+  <div class="card">
+    <div class="card-title" style="margin-bottom:1rem;">Relationships</div>
+    {% for rel_name, rel_data in relationships.items() %}
+    <div class="form-group">
+      <label class="form-label">{{ rel_name }}</label>
+      {% if rel_data.all_options %}
+        <div class="rel-grid">
+          {% for opt_id, opt_label in rel_data.all_options %}
+          <label class="rel-item">
+            <input type="checkbox" name="rel_{{ rel_name }}" value="{{ opt_id }}"
+                   {% if opt_id in rel_data.current_ids %}checked{% endif %}>
+            {{ opt_label }}
+          </label>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="form-hint" style="font-style:italic;">No options available in the target table.</div>
+      {% endif %}
+    </div>
+    {% if not loop.last %}<hr class="divider">{% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {# ── Submit ────────────────────────────────────────────────────────────── #}
+  <div style="display:flex; gap:1rem; align-items:center; margin-top:1rem;">
+    <button type="submit" class="btn btn-success">Save Changes</button>
+    <a href="/project/{{ project_key }}" class="btn btn-ghost">← Back to {{ proj.name }}</a>
+  </div>
+
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  // Tag chip toggling
+  function toggleChip(chip) {
+    chip.classList.toggle('active');
+    syncHiddenFromChips(chip.dataset.field);
+  }
+
+  function syncHiddenFromChips(fieldName) {
+    const active = [...document.querySelectorAll(`[data-field="${fieldName}"].active`)]
+      .map(c => c.dataset.value);
+    document.getElementById('hidden-' + fieldName).value = active.join(', ');
+    document.getElementById('text-' + fieldName).value = active.join(', ');
+  }
+
+  function syncChipsFromText(input, fieldName) {
+    const vals = input.value.split(',').map(v => v.trim().toLowerCase());
+    document.querySelectorAll(`[data-field="${fieldName}"]`).forEach(chip => {
+      chip.classList.toggle('active', vals.includes(chip.dataset.value.toLowerCase()));
+    });
+    document.getElementById('hidden-' + fieldName).value = input.value;
+  }
+</script>
+{% endblock %}

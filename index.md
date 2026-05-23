@@ -44,6 +44,7 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 
 ### Meta & Reports
 - **[How This Wiki Achieves Your Goals](report_wiki_utility.md)**: A definitive report on the operational utility of the DBCatalog memory system.
+- **[Wiki Field Guide](report_wiki_field_guide.md)**: Practical handbook of techniques for getting the most out of the wiki — session rituals, pre-build profiles, SQL query arsenals, cross-pollination workflows, DRAFT review cycles, staleness detection, context window discipline, and anti-patterns to avoid.
 
 ### Master Concepts & Architecture
 - **[The Deckard Boundary](architecture_deckard_boundary.md)**: The strict division of labor between deterministic Python and qualitative LLM judgment.

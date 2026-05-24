@@ -59,6 +59,8 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 
 - **[Beginner's Glossary](concept_beginners_glossary.md)**: Plain-English definitions for every CS, DH, and wiki-specific term — written for a beginning CS student, with real examples from the catalog.
 
+- **[NeoplatonismDB: Design & Implementation Plan](concept_neoplatonism_portal_design.md)**: Comprehensive design spec for a concept-first Neoplatonism knowledge portal covering ancient through Renaissance philosophy. Features a 200+ concept ontology, philosopher-network modeling, full reception history, and three content layers: structured metadata + entity essays + thematic essays. Next.js frontend, LLM-synthesized essays (DRAFT → review → Verified). Ambitious but achievable using existing DH infrastructure.
+
 ### Critiques & Evaluations
 - **[Database Engineering Critique](critique_database_engineering.md)**: Analysis of LLM over-engineering and the thinness of AI web writing.
 - **[Audience & Impact Evaluation](concept_dh_evaluation.md)**: Evaluating alignment with academics, gamers, and occult practitioners.

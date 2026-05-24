@@ -96,3 +96,7 @@ Chronological, append-only record of operations performed on the wiki.
 - Built `admin/requirements.txt`: flask>=3.0 only.
 - Authored `project_dhadmin.md` wiki profile.
 - Added card 23 (DH Admin Panel) to `index.html`. Indexed in `index.md`.
+
+## [2026-05-23] plan | NeoplatonismDB Design
+- Authored `concept_neoplatonism_portal_design.md`: Comprehensive design spec for a concept-first Neoplatonism knowledge portal (ancient through Renaissance). Ten sections covering: core philosophy (concept-first navigation), data model (Concepts, Philosophers, Schools, Texts tables + many-to-many relationships), three content layers (structured metadata + entity essays + thematic essays), Next.js SSG architecture, ingestion pipeline, Deckard Boundary, connections to HermeticDB/RenMagDB/AlchemyTimelineMap, phased roadmap, audience alignment, constraints, and first actions. Calls for 200+ concept ontology, LLM-synthesized essays reviewed to Verified, 15-20 thematic essays, five-phase implementation over 9 weeks.
+- Indexed in `index.md` under Master Concepts & Architecture.

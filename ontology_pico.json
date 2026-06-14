@@ -1,0 +1,69 @@
+{
+  "id": "pico_ontology",
+  "title": "Pico della Mirandola Portal Ontology",
+  "version": "0.1.0",
+  "status": "seed",
+  "project_root": "E:\\pdf\\renaissance magic\\Pico",
+  "database": "E:\\pdf\\renaissance magic\\Pico\\db\\pico.db",
+  "markdown_folder": "E:\\pdf\\renaissance magic\\Pico\\Markdown",
+  "description": "Seed ontology for systematic reading of Pico's works and Pico scholarship, with emphasis on magic, Kabbalah, astrology, concordism, Platonism, Aristotelianism, theology, philology, and historiography.",
+  "entity_classes": [
+    "work",
+    "edition",
+    "section",
+    "argument",
+    "claim",
+    "concept",
+    "person",
+    "scholar",
+    "source",
+    "manuscript_witness",
+    "language",
+    "tradition",
+    "controversy",
+    "reception_event"
+  ],
+  "relationship_types": [
+    "interprets",
+    "edits",
+    "translates",
+    "cites",
+    "depends_on",
+    "disputes",
+    "revises",
+    "influences",
+    "borrows_from",
+    "harmonizes_with",
+    "condemns",
+    "defends",
+    "classifies_as_magic",
+    "classifies_as_kabbalah"
+  ],
+  "themes": [
+    "kabbalah",
+    "magic",
+    "astrology",
+    "platonism",
+    "aristotelianism",
+    "human_dignity",
+    "concord",
+    "philology",
+    "theology",
+    "historiography"
+  ],
+  "evidence_statuses": [
+    "verified",
+    "likely",
+    "interpretive",
+    "placeholder",
+    "needs_review"
+  ],
+  "reading_questions": [
+    "What Pico text, passage, or thesis is under discussion?",
+    "Which intellectual traditions are being harmonized, subordinated, or contested?",
+    "Does the source treat magic or Kabbalah as practice, rhetoric, philology, theology, or historiographical construct?",
+    "What is the scholar's explicit argument and what prior interpretation is being revised?",
+    "What primary-text evidence anchors the claim?",
+    "What open problem or missing text does this source expose?"
+  ]
+}

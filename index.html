@@ -63,8 +63,57 @@
             100% { transform: scale(1.1) translate(5%, 5%); }
         }
 
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #f8fafc;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-brand span {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #f8fafc;
+        }
+
         header {
-            padding: 4rem 2rem 2rem;
+            padding: 8rem 2rem 3rem; /* adjusted for top-nav */
             text-align: center;
         }
 
@@ -188,6 +237,7 @@
         .card-actions {
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
             margin-top: auto;
         }
 
@@ -201,6 +251,11 @@
             transition: all 0.2s ease;
             cursor: pointer;
             flex: 1;
+            font-family: inherit;
+        }
+
+        button.btn {
+            appearance: none;
         }
 
         .btn-primary {
@@ -244,6 +299,293 @@
             font-size: 0.9rem;
         }
 
+        .section-title {
+            text-align: center;
+            margin: 5rem 0 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            color: #f8fafc;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .portal-controls {
+            margin: 0 auto 2.5rem;
+            padding: 1.25rem;
+            max-width: 1180px;
+            border: 1px solid rgba(148, 163, 184, 0.22);
+            border-radius: 18px;
+            background:
+                linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.72)),
+                radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 38%);
+            box-shadow: 0 24px 70px rgba(2, 6, 23, 0.35);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .control-row {
+            display: grid;
+            grid-template-columns: minmax(240px, 1fr) 220px;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .search-field,
+        .sort-select {
+            width: 100%;
+            border: 1px solid rgba(148, 163, 184, 0.28);
+            border-radius: 12px;
+            background: rgba(2, 6, 23, 0.52);
+            color: var(--text-main);
+            font: inherit;
+            padding: 0.85rem 1rem;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .search-field:focus,
+        .sort-select:focus {
+            border-color: rgba(56, 189, 248, 0.82);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.16);
+        }
+
+        .browse-toolbar {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .chip-group {
+            display: flex;
+            gap: 0.55rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-chip {
+            border: 1px solid rgba(148, 163, 184, 0.28);
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.72);
+            color: var(--text-muted);
+            cursor: pointer;
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.48rem 0.82rem;
+            transition: all 0.2s ease;
+        }
+
+        .filter-chip:hover,
+        .filter-chip.is-active {
+            border-color: rgba(56, 189, 248, 0.82);
+            color: #f8fafc;
+            background: rgba(56, 189, 248, 0.13);
+        }
+
+        .lens-chip.is-active {
+            border-color: rgba(236, 72, 153, 0.82);
+            background: rgba(236, 72, 153, 0.12);
+        }
+
+        .result-count {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .no-results {
+            display: none;
+            margin: 2rem auto 0;
+            max-width: 720px;
+            padding: 1.5rem;
+            border: 1px dashed rgba(148, 163, 184, 0.35);
+            border-radius: 16px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .no-results.is-visible {
+            display: block;
+        }
+
+        .card.is-hidden {
+            display: none;
+        }
+
+        .relation-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 160;
+            background: rgba(2, 6, 23, 0.58);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .relation-backdrop.is-open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .relation-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 170;
+            width: min(520px, 94vw);
+            height: 100vh;
+            padding: 2rem;
+            overflow-y: auto;
+            transform: translateX(105%);
+            transition: transform 0.28s ease;
+            border-left: 1px solid rgba(148, 163, 184, 0.25);
+            background:
+                linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 0.98)),
+                radial-gradient(circle at top right, rgba(236, 72, 153, 0.18), transparent 35%);
+            box-shadow: -24px 0 80px rgba(2, 6, 23, 0.62);
+        }
+
+        .relation-panel.is-open {
+            transform: translateX(0);
+        }
+
+        .relation-close {
+            float: right;
+            width: 2.4rem;
+            height: 2.4rem;
+            border: 1px solid rgba(148, 163, 184, 0.28);
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 0.82);
+            color: #f8fafc;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .relation-kicker {
+            color: var(--secondary);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .relation-panel h2 {
+            clear: both;
+            margin: 0.4rem 0 0.5rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            line-height: 1.1;
+        }
+
+        .relation-meta {
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .relation-section {
+            margin-top: 1.5rem;
+        }
+
+        .relation-section h3 {
+            color: #f8fafc;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .relation-links,
+        .related-list {
+            display: grid;
+            gap: 0.7rem;
+        }
+
+        .relation-links a,
+        .related-card {
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.72);
+            color: var(--text-main);
+            padding: 0.8rem;
+            text-align: left;
+            text-decoration: none;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .related-card {
+            cursor: pointer;
+            font: inherit;
+        }
+
+        .relation-links a:hover,
+        .related-card:hover {
+            border-color: rgba(56, 189, 248, 0.65);
+            background: rgba(56, 189, 248, 0.08);
+        }
+
+        .related-card strong {
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .related-card span {
+            color: var(--text-muted);
+            display: block;
+            font-size: 0.86rem;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Theme categories for analysis cards */
+        .theme-ai { --theme-color: #ef4444; --theme-bg: rgba(239, 68, 68, 0.1); }
+        .theme-audit { --theme-color: #ec4899; --theme-bg: rgba(236, 72, 153, 0.1); }
+        .theme-theory { --theme-color: #38bdf8; --theme-bg: rgba(56, 189, 248, 0.1); }
+        .theme-arch { --theme-color: #f59e0b; --theme-bg: rgba(245, 158, 11, 0.1); }
+        .theme-eval { --theme-color: #8b5cf6; --theme-bg: rgba(139, 92, 246, 0.1); }
+        .theme-method { --theme-color: #10b981; --theme-bg: rgba(16, 185, 129, 0.1); }
+        .theme-prior { --theme-color: #14b8a6; --theme-bg: rgba(20, 184, 166, 0.1); }
+        .theme-sys { --theme-color: #94a3b8; --theme-bg: rgba(148, 163, 184, 0.1); }
+
+        .analysis-card {
+            border-top: 4px solid var(--theme-color);
+        }
+        
+        .analysis-card .card-badge {
+            color: var(--theme-color);
+            background: var(--theme-bg);
+        }
+
+        .analysis-card .btn-primary {
+            background: var(--theme-color);
+            color: #020617;
+            font-weight: 700;
+        }
+        
+        .analysis-card .btn-primary:hover {
+            filter: brightness(1.2);
+            background: var(--theme-color);
+        }
+
         /* Staggered animation for cards on load */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
@@ -265,56 +607,29 @@
         .card:nth-child(9) { animation-delay: 0.9s; }
         .card:nth-child(10) { animation-delay: 1.0s; }
 
-        .rabbit-hole-section {
-            margin-top: 4rem;
-            padding: 3rem;
-            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            animation: fadeUp 0.6s ease backwards 1.1s;
-        }
-
-        .rabbit-hole-section h2 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            color: #f8fafc;
-        }
-
-        .rabbit-hole-section p {
-            color: var(--text-muted);
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-size: 1.1rem;
-        }
-
-        .rabbit-hole-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .rabbit-hole-links .btn {
-            flex: 0 1 auto;
-            min-width: 200px;
-            padding: 1rem;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
+        /* Removed rabbit-hole-section classes in favor of uniform analysis cards */
 
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             .grid { grid-template-columns: 1fr; }
+            .control-row { grid-template-columns: 1fr; }
+            .portal-controls { padding: 1rem; }
+            .relation-panel { padding: 1.25rem; }
         }
     </style>
 </head>
 <body>
+
+    <nav class="top-nav">
+        <a href="#" class="nav-brand"><span>DBCatalog</span></a>
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#analysis">Analysis & Theory</a>
+            <a href="index.md">System Index</a>
+            <a href="goals.html">Roadmap</a>
+            <a href="log.md">Ops Log</a>
+        </div>
+    </nav>
 
     <div class="ambient-glow"></div>
     <div class="ambient-glow secondary"></div>
@@ -322,15 +637,53 @@
     <header>
         <h1>DBCatalog Portal</h1>
         <p>A compounding LLM-Wiki memory system for digital humanities, esoteric tracking, and personal knowledge archaeology.</p>
-        <div class="nav-links">
-            <a href="index.md">System Index</a>
-            <a href="goals.html">Goals & Roadmap</a>
-            <a href="log.md">Operations Log</a>
-            <a href="https://github.com/t3dy/DBCatalog" target="_blank">Repository</a>
-        </div>
     </header>
 
     <main>
+        <div class="section-title" id="projects" style="margin-top: 0;">
+            <h2>Ecosystem Projects</h2>
+            <p>Portals, procedural engines, and megaphone archives.</p>
+        </div>
+
+        <section class="portal-controls" aria-label="Card search and browsing controls">
+            <div class="control-row">
+                <label class="visually-hidden" for="cardSearch">Search cards</label>
+                <input id="cardSearch" class="search-field" type="search" placeholder="Search projects, concepts, methods, archives..." autocomplete="off">
+
+                <label class="visually-hidden" for="sortCards">Sort cards</label>
+                <select id="sortCards" class="sort-select">
+                    <option value="featured">Featured order</option>
+                    <option value="title">Title A-Z</option>
+                    <option value="type">Type / badge</option>
+                    <option value="section">Section</option>
+                    <option value="relations">Most connected</option>
+                </select>
+            </div>
+
+            <div class="browse-toolbar">
+                <div class="chip-group" aria-label="Section filters">
+                    <button class="filter-chip is-active" type="button" data-section-filter="all">All Sections</button>
+                    <button class="filter-chip" type="button" data-section-filter="project">Projects</button>
+                    <button class="filter-chip" type="button" data-section-filter="analysis">Analysis</button>
+                </div>
+
+                <div class="chip-group" aria-label="Thematic lenses">
+                    <button class="filter-chip lens-chip is-active" type="button" data-lens-filter="all">All Lenses</button>
+                    <button class="filter-chip lens-chip" type="button" data-lens-filter="esoteric">Esoteric</button>
+                    <button class="filter-chip lens-chip" type="button" data-lens-filter="archives">Archives</button>
+                    <button class="filter-chip lens-chip" type="button" data-lens-filter="engines">Engines</button>
+                    <button class="filter-chip lens-chip" type="button" data-lens-filter="raw">RAW / Illuminatus</button>
+                    <button class="filter-chip lens-chip" type="button" data-lens-filter="methodology">Methodology</button>
+                </div>
+
+                <div id="resultCount" class="result-count" aria-live="polite">Indexing cards...</div>
+            </div>
+        </section>
+
+        <div id="noResults" class="no-results" role="status">
+            No cards match this path through the catalog yet. Try a broader search or switch thematic lenses.
+        </div>
+
         <div class="grid">
             
             <!-- Project 1 -->
@@ -492,7 +845,25 @@
                     <span class="btn btn-disabled">Local Tool</span>
                 </div>
             </div>
+            
             <!-- Project 11 -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Illuminatus!</h2>
+                    <span class="card-badge">Portal</span>
+                </div>
+                <p class="card-desc"><strong>Map the conspiracy!</strong> A spatial knowledge portal for Robert Anton Wilson and Robert Shea's *The Illuminatus! Trilogy*, with an interactive atlas of places, hover summaries, and split-pane reading.<br><br><em>Status</em>: Built to unite literary criticism, Discordian counterculture, religious studies, and esoteric cross-referencing without flattening the book's deliberate instability.</p>
+                <div class="card-next-step" style="background: rgba(56, 189, 248, 0.05); padding: 10px; border-left: 2px solid var(--accent); margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                    <strong>🎯 Next Step:</strong> Build the location atlas, hover summaries, and click-through reading pane, then wire CrowleyDB links into the esoteric layer.
+                </div>
+                <div class="card-actions">
+                    <a href="project_illuminatus.md" class="btn btn-secondary">Wiki Profile</a>
+                    <a href="project_illuminatus_raw.md" class="btn btn-secondary">RAW Hub</a>
+                    <span class="btn btn-disabled">Planned Site</span>
+                </div>
+            </div>
+
+            <!-- Project 12 -->
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Digby Game</h2>
@@ -508,7 +879,7 @@
                 </div>
             </div>
 
-            <!-- Project 12 -->
+            <!-- Project 13 -->
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Alchemy Scryfall</h2>
@@ -524,7 +895,7 @@
                 </div>
             </div>
 
-            <!-- Project 13 -->
+            <!-- Project 14 -->
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">NSFRIPPER</h2>
@@ -540,7 +911,7 @@
                 </div>
             </div>
 
-            <!-- Project 14 -->
+            <!-- Project 15 -->
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Almagest Kit (ACK)</h2>
@@ -556,7 +927,7 @@
                 </div>
             </div>
 
-            <!-- Project 15 -->
+            <!-- Project 16 -->
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Book History</h2>
@@ -572,7 +943,7 @@
                 </div>
             </div>
 
-            <!-- Project 16 -->
+            <!-- Project 17 -->
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Vibe Coding Garage</h2>
@@ -588,7 +959,7 @@
                 </div>
             </div>
 
-            <!-- Project 17 -->
+            <!-- Project 18 -->
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Legacy: TreeTapper</h2>
@@ -604,7 +975,7 @@
                 </div>
             </div>
 
-            <!-- Project 18 -->
+            <!-- Project 19 -->
             <div class="card">
                 <div class="card-header">
                     <h2 class="card-title">Legacy: MTG Overlay</h2>
@@ -622,69 +993,376 @@
 
         </div>
 
-        <div class="rabbit-hole-section" style="margin-bottom: 2rem; background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(236, 72, 153, 0.15)); border-color: rgba(236, 72, 153, 0.3);">
-            <h2>Auditing & Quality Control</h2>
-            <p>A major focus of this memory system is elevating the quality of LLM-generated prose across thousands of database entries. Explore our strategies for zero-token deterministic linting, semantic sampling, and defeating generic "LLM slop."</p>
-            <div class="rabbit-hole-links">
-                <a href="concept_auditing_writing.md" class="btn btn-primary" style="background: var(--secondary); color: white;">🔍 Read the Auditing Strategy</a>
-            </div>
+        <div class="section-title" id="analysis">
+            <h2>Analysis & Architecture</h2>
+            <p>Categorized theories, evaluations, and methodologies governing the ecosystem.</p>
         </div>
 
-        <div class="rabbit-hole-section" style="margin-bottom: 2rem;">
-            <h2>Database Theories</h2>
-            <p>Explore our analysis of the three core database architectures: Knowledge Portals (Dictionaries/Timelines), Procedural Engines (LLM Dungeon Masters/Game Gen), and Social Megaphones (Automated Content Mining).</p>
-            <div class="rabbit-hole-links">
-                <a href="concept_database_theories.md" class="btn btn-primary" style="background: var(--primary); color: white;">📚 Read the Theory</a>
+        <div class="grid">
+            <!-- Analysis Card: Prompt Archaeology -->
+            <div class="card analysis-card theme-ai">
+                <div class="card-header">
+                    <h2 class="card-title">Prompt Archaeology</h2>
+                    <span class="card-badge">AI Pipeline</span>
+                </div>
+                <p class="card-desc"><strong>Mine the Megabase!</strong> Building deterministic "nugget machines" to sift millions of chat messages and extract creative brilliance using FTS5 and the Deckard Boundary.</p>
+                <div class="card-actions">
+                    <a href="architecture_prompt_archaeology_machines.md" class="btn btn-primary">Read Architecture</a>
+                </div>
             </div>
-        </div>
 
-        <div class="rabbit-hole-section" style="margin-bottom: 2rem; background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(245, 158, 11, 0.15)); border-color: rgba(245, 158, 11, 0.3);">
-            <h2>Frontend Patterns & UI/UX Standards</h2>
-            <p>Review the strict visual requirements for the digital humanities ecosystem. From glassmorphic styling to relational browsing and standardized scholarly card templates, this guarantees we build arresting reading environments, not just flat web pages.</p>
-            <div class="rabbit-hole-links">
-                <a href="architecture_frontend_patterns.md" class="btn btn-primary" style="background: var(--warning); color: #0f172a;">🎨 Explore Frontend Architecture</a>
+            <!-- Analysis Card: Auditing -->
+            <div class="card analysis-card theme-audit">
+                <div class="card-header">
+                    <h2 class="card-title">Auditing & QC</h2>
+                    <span class="card-badge">Auditing</span>
+                </div>
+                <p class="card-desc">Elevating LLM-generated prose across thousands of database entries. Strategies for zero-token deterministic linting, semantic sampling, and defeating generic "LLM slop."</p>
+                <div class="card-actions">
+                    <a href="concept_auditing_writing.md" class="btn btn-primary">Read Strategy</a>
+                </div>
             </div>
-        </div>
 
-        <div class="rabbit-hole-section" style="margin-bottom: 2rem; background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(139, 92, 246, 0.15)); border-color: rgba(139, 92, 246, 0.3);">
-            <h2>The Triple Audience Evaluation</h2>
-            <p>We build for Academic Researchers, Gamers, and Occult Practitioners. Read our honest evaluation of how well projects like HermeticDB and QueryPat are serving this diverse ecosystem, and what we need to do to bridge the gap between "Cathedral Rigor" and "Playable Grimoires."</p>
-            <div class="rabbit-hole-links">
-                <a href="concept_dh_evaluation.md" class="btn btn-primary" style="background: #8b5cf6; color: white;">🎯 Read the Evaluation</a>
+            <!-- Analysis Card: Database Theories -->
+            <div class="card analysis-card theme-theory">
+                <div class="card-header">
+                    <h2 class="card-title">Database Theories</h2>
+                    <span class="card-badge">Theory</span>
+                </div>
+                <p class="card-desc">Analysis of the core database architectures: Knowledge Portals (Dictionaries/Timelines), Procedural Engines (Game Gen), and Social Megaphones (Automated Mining).</p>
+                <div class="card-actions">
+                    <a href="concept_database_theories.md" class="btn btn-primary">Read Theory</a>
+                </div>
             </div>
-        </div>
 
-        <div class="rabbit-hole-section" style="margin-bottom: 2rem;">
-            <h2>DH Methodological Analysis</h2>
-            <p>A deep dive into the strict structural and methodological rigor of the databases. We evaluate ontology modeling in QueryPat, textual transmission in HermeticDB, IIIF standards for marginalia, and the methodological flaws of using LLMs for 17th-century sentiment analysis.</p>
-            <div class="rabbit-hole-links">
-                <a href="report_dh_project_analysis.md" class="btn btn-primary" style="background: var(--primary); color: white;">🔬 Read the DH Methodological Analysis</a>
+            <!-- Analysis Card: Frontend Architecture -->
+            <div class="card analysis-card theme-arch">
+                <div class="card-header">
+                    <h2 class="card-title">Frontend Patterns</h2>
+                    <span class="card-badge">Architecture</span>
+                </div>
+                <p class="card-desc">Strict visual requirements for digital humanities. From glassmorphism to relational browsing and scholarly cards, guaranteeing arresting reading environments.</p>
+                <div class="card-actions">
+                    <a href="architecture_frontend_patterns.md" class="btn btn-primary">Explore UI/UX</a>
+                </div>
             </div>
-        </div>
 
-        <div class="rabbit-hole-section" style="margin-bottom: 2rem; background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(16, 185, 129, 0.15)); border-color: rgba(16, 185, 129, 0.3);">
-            <h2>Prior Art & External Ecosystems</h2>
-            <p>We don't reinvent the wheel. Explore our analysis of major Digital Humanities projects—like The Chymistry of Isaac Newton and Six Degrees of Francis Bacon—and discover how we adapt their methodologies for network graphing, diplomatic transcriptions, and Linked Open Data.</p>
-            <div class="rabbit-hole-links">
-                <a href="concept_prior_art.md" class="btn btn-primary" style="background: #10b981; color: white;">🌐 Explore Prior Art</a>
+            <!-- Analysis Card: The Triple Audience -->
+            <div class="card analysis-card theme-eval">
+                <div class="card-header">
+                    <h2 class="card-title">Audience Evaluation</h2>
+                    <span class="card-badge">Evaluation</span>
+                </div>
+                <p class="card-desc">We build for Academics, Gamers, and Occultists. An honest evaluation of how well projects bridge the gap between "Cathedral Rigor" and "Playable Grimoires."</p>
+                <div class="card-actions">
+                    <a href="concept_dh_evaluation.md" class="btn btn-primary">Read Evaluation</a>
+                </div>
             </div>
-        </div>
 
-        <div class="rabbit-hole-section">
-            <h2>Down the Rabbit Hole</h2>
-            <p>Curious how the AI manages its own memory? Explore the raw Karpathy-style knowledge base, where the LLM continuously synthesizes its findings, tracks its operations, and defines its own rules.</p>
-            <div class="rabbit-hole-links">
-                <a href="index.md" class="btn btn-secondary">🗂️ The Master Index</a>
-                <a href="log.md" class="btn btn-secondary">⏱️ The Operations Log</a>
-                <a href="CLAUDE.md" class="btn btn-secondary">📜 The Agent Schema</a>
+            <!-- Analysis Card: DH Methodology -->
+            <div class="card analysis-card theme-method">
+                <div class="card-header">
+                    <h2 class="card-title">Methodology Analysis</h2>
+                    <span class="card-badge">Methodology</span>
+                </div>
+                <p class="card-desc">A deep dive into structural rigor. Ontology modeling, textual transmission, IIIF standards, and the flaws of using LLMs for 17th-century sentiment analysis.</p>
+                <div class="card-actions">
+                    <a href="report_dh_project_analysis.md" class="btn btn-primary">Read Analysis</a>
+                </div>
             </div>
-        </div>
 
+            <!-- Analysis Card: Prior Art -->
+            <div class="card analysis-card theme-prior">
+                <div class="card-header">
+                    <h2 class="card-title">Prior Art & Ecosystems</h2>
+                    <span class="card-badge">Research</span>
+                </div>
+                <p class="card-desc">We don't reinvent the wheel. Analysis of major DH projects and how we adapt their methodologies for network graphing, diplomatic transcriptions, and Linked Open Data.</p>
+                <div class="card-actions">
+                    <a href="concept_prior_art.md" class="btn btn-primary">Explore Prior Art</a>
+                </div>
+            </div>
+
+            <!-- Analysis Card: Down the Rabbit Hole -->
+            <div class="card analysis-card theme-sys">
+                <div class="card-header">
+                    <h2 class="card-title">System Architecture</h2>
+                    <span class="card-badge">System</span>
+                </div>
+                <p class="card-desc">Curious how the AI manages its own memory? Explore the raw Karpathy-style knowledge base, tracking operations, rules, and continuous synthesis.</p>
+                <div class="card-actions" style="flex-wrap: wrap;">
+                    <a href="index.md" class="btn btn-secondary">System Index</a>
+                    <a href="CLAUDE.md" class="btn btn-secondary">Agent Schema</a>
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <footer>
         <p>Managed by LLM Agent Protocol &copy; 2026. Memory system compounding continuously.</p>
     </footer>
+
+    <div id="relationBackdrop" class="relation-backdrop" aria-hidden="true"></div>
+    <aside id="relationPanel" class="relation-panel" role="dialog" aria-modal="true" aria-labelledby="relationTitle" aria-hidden="true">
+        <button id="relationClose" class="relation-close" type="button" aria-label="Close related card panel">&times;</button>
+        <div class="relation-kicker" id="relationKicker">Relational Browser</div>
+        <h2 id="relationTitle">Select a card</h2>
+        <p id="relationMeta" class="relation-meta"></p>
+
+        <div class="relation-section">
+            <h3>Available Paths</h3>
+            <div id="relationLinks" class="relation-links"></div>
+        </div>
+
+        <div class="relation-section">
+            <h3>Related Cards</h3>
+            <div id="relatedCards" class="related-list"></div>
+        </div>
+    </aside>
+
+    <script>
+        (() => {
+            const grids = Array.from(document.querySelectorAll('.grid'));
+            const searchInput = document.getElementById('cardSearch');
+            const sortSelect = document.getElementById('sortCards');
+            const resultCount = document.getElementById('resultCount');
+            const noResults = document.getElementById('noResults');
+            const panel = document.getElementById('relationPanel');
+            const backdrop = document.getElementById('relationBackdrop');
+            const relationTitle = document.getElementById('relationTitle');
+            const relationMeta = document.getElementById('relationMeta');
+            const relationKicker = document.getElementById('relationKicker');
+            const relationLinks = document.getElementById('relationLinks');
+            const relatedCards = document.getElementById('relatedCards');
+            const closeButton = document.getElementById('relationClose');
+            let lastFocusedElement = null;
+
+            const lensTerms = {
+                all: [],
+                esoteric: ['alchemy', 'crowley', 'esoteric', 'hermetic', 'illuminatus', 'magic', 'occult', 'scryfall', 'symbol', 'tarot'],
+                archives: ['archive', 'archives', 'bibliography', 'corpus', 'database', 'index', 'marginalia', 'megabase', 'transcription'],
+                engines: ['engine', 'game', 'generator', 'procedural', 'simulation', 'studio', 'tool'],
+                raw: ['discordian', 'illuminatus', 'psychedelic', 'raw', 'robert', 'wilson'],
+                methodology: ['architecture', 'auditing', 'evaluation', 'methodology', 'ontology', 'prior', 'research', 'theory']
+            };
+
+            const stopWords = new Set([
+                'about', 'across', 'after', 'analysis', 'and', 'are', 'between', 'building', 'card', 'cards', 'core', 'for', 'from',
+                'into', 'its', 'the', 'their', 'this', 'through', 'using', 'with', 'wiki', 'read', 'project', 'projects'
+            ]);
+
+            const normalize = (value) => value.toLowerCase().replace(/[^a-z0-9\s/!-]/g, ' ');
+            const tokenize = (value) => normalize(value)
+                .split(/\s+/)
+                .filter((term) => term.length > 2 && !stopWords.has(term));
+
+            const cards = grids.flatMap((grid, gridIndex) => {
+                return Array.from(grid.querySelectorAll('.card')).map((card, index) => {
+                    const title = card.querySelector('.card-title')?.textContent.trim() || 'Untitled';
+                    const badge = card.querySelector('.card-badge')?.textContent.trim() || 'Unclassified';
+                    const desc = card.querySelector('.card-desc')?.textContent.trim() || '';
+                    const links = Array.from(card.querySelectorAll('.card-actions a')).map((link) => ({
+                        href: link.getAttribute('href'),
+                        label: link.textContent.trim()
+                    }));
+                    const section = gridIndex === 0 ? 'project' : 'analysis';
+                    const sourceText = `${title} ${badge} ${desc} ${links.map((link) => link.label).join(' ')}`;
+                    const tokens = tokenize(sourceText);
+                    const tokenSet = new Set(tokens);
+                    const entry = { card, grid, originalIndex: index, gridIndex, title, badge, desc, links, section, sourceText, tokens, tokenSet };
+
+                    card.dataset.section = section;
+                    card.dataset.title = title;
+                    card.dataset.badge = badge;
+                    card.dataset.index = String(index);
+
+                    const actions = card.querySelector('.card-actions');
+                    if (actions) {
+                        const relationButton = document.createElement('button');
+                        relationButton.type = 'button';
+                        relationButton.className = 'btn btn-secondary relation-trigger';
+                        relationButton.textContent = 'Explore Relations';
+                        relationButton.setAttribute('aria-label', `Explore relations for ${title}`);
+                        relationButton.addEventListener('click', () => openRelationPanel(entry));
+                        actions.appendChild(relationButton);
+                    }
+
+                    return entry;
+                });
+            });
+
+            const sharedTerms = (left, right) => {
+                const terms = [];
+                left.tokenSet.forEach((term) => {
+                    if (right.tokenSet.has(term)) terms.push(term);
+                });
+                return terms;
+            };
+
+            const scoreRelation = (left, right) => {
+                if (left === right) return null;
+                const terms = sharedTerms(left, right);
+                let score = terms.length;
+                if (left.badge === right.badge) score += 8;
+                if (left.section === right.section) score += 3;
+                Object.values(lensTerms).forEach((termsForLens) => {
+                    const leftMatches = termsForLens.some((term) => left.tokenSet.has(term));
+                    const rightMatches = termsForLens.some((term) => right.tokenSet.has(term));
+                    if (leftMatches && rightMatches) score += 2;
+                });
+                return { entry: right, score, terms };
+            };
+
+            const relatedFor = (entry) => cards
+                .map((candidate) => scoreRelation(entry, candidate))
+                .filter((result) => result && result.score > 1)
+                .sort((a, b) => b.score - a.score || a.entry.title.localeCompare(b.entry.title))
+                .slice(0, 8);
+
+            const relationDensity = (entry) => relatedFor(entry).reduce((total, result) => total + result.score, 0);
+
+            let activeSection = 'all';
+            let activeLens = 'all';
+
+            const cardMatches = (entry, queryTerms) => {
+                const sectionMatch = activeSection === 'all' || entry.section === activeSection;
+                const lensMatch = activeLens === 'all' || lensTerms[activeLens].some((term) => normalize(entry.sourceText).includes(term));
+                const queryMatch = queryTerms.every((term) => normalize(entry.sourceText).includes(term));
+                return sectionMatch && lensMatch && queryMatch;
+            };
+
+            const sortEntries = (entries) => {
+                const mode = sortSelect.value;
+                const sorted = [...entries];
+                sorted.sort((a, b) => {
+                    if (mode === 'title') return a.title.localeCompare(b.title);
+                    if (mode === 'type') return a.badge.localeCompare(b.badge) || a.title.localeCompare(b.title);
+                    if (mode === 'section') return a.section.localeCompare(b.section) || a.title.localeCompare(b.title);
+                    if (mode === 'relations') return relationDensity(b) - relationDensity(a) || a.title.localeCompare(b.title);
+                    return a.originalIndex - b.originalIndex;
+                });
+                return sorted;
+            };
+
+            const applyFilters = () => {
+                const queryTerms = tokenize(searchInput.value);
+                let visibleCount = 0;
+
+                grids.forEach((grid) => {
+                    const entries = cards.filter((entry) => entry.grid === grid);
+                    sortEntries(entries).forEach((entry) => grid.appendChild(entry.card));
+                });
+
+                cards.forEach((entry) => {
+                    const isVisible = cardMatches(entry, queryTerms);
+                    entry.card.classList.toggle('is-hidden', !isVisible);
+                    if (isVisible) visibleCount += 1;
+                });
+
+                resultCount.textContent = `${visibleCount} of ${cards.length} cards visible`;
+                noResults.classList.toggle('is-visible', visibleCount === 0);
+            };
+
+            const activateChip = (button, selector, setter) => {
+                document.querySelectorAll(selector).forEach((chip) => chip.classList.remove('is-active'));
+                button.classList.add('is-active');
+                setter(button);
+                applyFilters();
+            };
+
+            document.querySelectorAll('[data-section-filter]').forEach((button) => {
+                button.addEventListener('click', () => activateChip(button, '[data-section-filter]', (chip) => {
+                    activeSection = chip.dataset.sectionFilter;
+                }));
+            });
+
+            document.querySelectorAll('[data-lens-filter]').forEach((button) => {
+                button.addEventListener('click', () => activateChip(button, '[data-lens-filter]', (chip) => {
+                    activeLens = chip.dataset.lensFilter;
+                }));
+            });
+
+            searchInput.addEventListener('input', applyFilters);
+            sortSelect.addEventListener('change', applyFilters);
+
+            function renderLinks(entry) {
+                relationLinks.innerHTML = '';
+                if (!entry.links.length) {
+                    const empty = document.createElement('p');
+                    empty.className = 'relation-meta';
+                    empty.textContent = 'No direct page link is attached yet.';
+                    relationLinks.appendChild(empty);
+                    return;
+                }
+                entry.links.forEach((link) => {
+                    const anchor = document.createElement('a');
+                    anchor.href = link.href;
+                    anchor.textContent = `${link.label}: ${link.href}`;
+                    relationLinks.appendChild(anchor);
+                });
+            }
+
+            function renderRelated(entry) {
+                relatedCards.innerHTML = '';
+                const related = relatedFor(entry);
+                if (!related.length) {
+                    const empty = document.createElement('p');
+                    empty.className = 'relation-meta';
+                    empty.textContent = 'No close neighbors yet. Add richer card metadata to strengthen this part of the graph.';
+                    relatedCards.appendChild(empty);
+                    return;
+                }
+                related.forEach((result) => {
+                    const button = document.createElement('button');
+                    const terms = result.terms.slice(0, 5).join(', ') || 'shared section or thematic lens';
+                    const title = document.createElement('strong');
+                    const meta = document.createElement('span');
+                    button.type = 'button';
+                    button.className = 'related-card';
+                    title.textContent = result.entry.title;
+                    meta.textContent = `${result.entry.badge} / ${result.entry.section} / shared: ${terms}`;
+                    button.append(title, meta);
+                    button.addEventListener('click', () => openRelationPanel(result.entry));
+                    relatedCards.appendChild(button);
+                });
+            }
+
+            function openRelationPanel(entry) {
+                if (!panel.classList.contains('is-open')) {
+                    lastFocusedElement = document.activeElement;
+                }
+                relationKicker.textContent = `${entry.section} / ${entry.badge}`;
+                relationTitle.textContent = entry.title;
+                relationMeta.textContent = entry.desc;
+                renderLinks(entry);
+                renderRelated(entry);
+                panel.classList.add('is-open');
+                backdrop.classList.add('is-open');
+                panel.setAttribute('aria-hidden', 'false');
+                backdrop.setAttribute('aria-hidden', 'false');
+                closeButton.focus();
+            }
+
+            function closeRelationPanel() {
+                panel.classList.remove('is-open');
+                backdrop.classList.remove('is-open');
+                panel.setAttribute('aria-hidden', 'true');
+                backdrop.setAttribute('aria-hidden', 'true');
+                if (lastFocusedElement && document.contains(lastFocusedElement)) {
+                    lastFocusedElement.focus();
+                }
+            }
+
+            closeButton.addEventListener('click', closeRelationPanel);
+            backdrop.addEventListener('click', closeRelationPanel);
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') closeRelationPanel();
+            });
+
+            applyFilters();
+        })();
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,244 @@
+{
+  "id": "raw_manifest",
+  "title": "Robert Anton Wilson Section Manifest",
+  "version": "0.1.0",
+  "status": "seed",
+  "description": "Card/page manifest for the RAW subsection of the Illuminatus knowledge portal.",
+  "context_rules": {
+    "load_order": [
+      "project_illuminatus_styleguide.md",
+      "architecture_context_engineering.md",
+      "concept_raw_ontology.md",
+      "project_illuminatus_raw.md",
+      "requested entity file"
+    ],
+    "principle": "Load cards first, long pages only when needed, and source excerpts only when enriching or auditing a specific entry."
+  },
+  "sections": [
+    {
+      "id": "raw_biography",
+      "label": "Biography",
+      "entry_type": "person",
+      "card_file": "raw_bio_robert_anton_wilson.md",
+      "page_file": "raw_bio_robert_anton_wilson.md",
+      "status": "draft"
+    },
+    {
+      "id": "raw_associates",
+      "label": "Associates",
+      "entry_type": "person",
+      "card_file": "raw_associates_cards.md",
+      "status": "draft"
+    },
+    {
+      "id": "raw_counterculture",
+      "label": "Counterculture",
+      "entry_type": "movement",
+      "card_file": "raw_counterculture_cards.md",
+      "status": "draft"
+    },
+    {
+      "id": "raw_psychedelic",
+      "label": "Psychedelic",
+      "entry_type": "psychedelic_concept",
+      "card_file": "raw_psychedelic_cards.md",
+      "status": "draft"
+    },
+    {
+      "id": "raw_occult",
+      "label": "Occult",
+      "entry_type": "esoteric_correspondence",
+      "card_file": "raw_occult_cards.md",
+      "status": "draft"
+    },
+    {
+      "id": "raw_media",
+      "label": "Internet Writings, Zines, Video, and Audio",
+      "entry_type": "media_item",
+      "status": "placeholder",
+      "notes": "[Need to add more bibliographic detail]"
+    }
+  ],
+  "works": [
+    {
+      "id": "raw_book_book_of_the_breast",
+      "title": "The Book of the Breast",
+      "entity_class": "work",
+      "card_file": "raw_book_book_of_the_breast.md",
+      "page_file": "raw_book_book_of_the_breast.md",
+      "domains": ["body", "sexuality", "symbolism"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_coincidance",
+      "title": "Coincidance",
+      "entity_class": "work",
+      "card_file": "raw_book_coincidance.md",
+      "page_file": "raw_book_coincidance.md",
+      "domains": ["literary_method", "counterculture", "epistemology"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_cosmic_trigger_i",
+      "title": "Cosmic Trigger I: The Final Secret of the Illuminati",
+      "entity_class": "work",
+      "card_file": "raw_book_cosmic_trigger_i.md",
+      "page_file": "raw_book_cosmic_trigger_i.md",
+      "domains": ["memoir", "psychedelic_culture", "occult", "epistemology"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_cosmic_trigger_ii",
+      "title": "Cosmic Trigger II: Down to Earth",
+      "entity_class": "work",
+      "card_file": "raw_book_cosmic_trigger_ii.md",
+      "page_file": "raw_book_cosmic_trigger_ii.md",
+      "domains": ["memoir", "synchronicity", "counterculture"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_cosmic_trigger_iii",
+      "title": "Cosmic Trigger III: My Life After Death",
+      "entity_class": "work",
+      "card_file": "raw_book_cosmic_trigger_iii.md",
+      "page_file": "raw_book_cosmic_trigger_iii.md",
+      "domains": ["memoir", "mortality", "retrospection"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_email_to_the_universe",
+      "title": "Email to the Universe",
+      "entity_class": "work",
+      "card_file": "raw_book_email_to_the_universe.md",
+      "page_file": "raw_book_email_to_the_universe.md",
+      "domains": ["essays", "letters", "public_intellectual"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_everything_is_under_control",
+      "title": "Everything Is Under Control",
+      "entity_class": "work",
+      "card_file": "raw_book_everything_is_under_control.md",
+      "page_file": "raw_book_everything_is_under_control.md",
+      "domains": ["conspiracy", "reference", "cultural_form"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_illuminati_papers",
+      "title": "The Illuminati Papers",
+      "entity_class": "work",
+      "card_file": "raw_book_illuminati_papers.md",
+      "page_file": "raw_book_illuminati_papers.md",
+      "domains": ["essays", "conspiracy", "political_satire"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_illuminatus",
+      "title": "The Illuminatus! Trilogy",
+      "entity_class": "work",
+      "card_file": "raw_book_illuminatus.md",
+      "page_file": "raw_book_illuminatus.md",
+      "domains": ["fiction", "conspiracy", "discordianism", "occult", "counterculture"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_masks_of_the_illuminati",
+      "title": "Masks of the Illuminati",
+      "entity_class": "work",
+      "card_file": "raw_book_masks_of_the_illuminati.md",
+      "page_file": "raw_book_masks_of_the_illuminati.md",
+      "domains": ["historical_fiction", "secret_societies", "revelation"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_neuropolitique",
+      "title": "Neuropolitique",
+      "entity_class": "work",
+      "card_file": "raw_book_neuropolitique.md",
+      "page_file": "raw_book_neuropolitique.md",
+      "domains": ["politics", "consciousness", "media", "leary"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_prometheus_rising",
+      "title": "Prometheus Rising",
+      "entity_class": "work",
+      "card_file": "raw_book_prometheus_rising.md",
+      "page_file": "raw_book_prometheus_rising.md",
+      "domains": ["consciousness", "eight_circuit_model", "psychotechnology"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_quantum_psychology",
+      "title": "Quantum Psychology",
+      "entity_class": "work",
+      "card_file": "raw_book_quantum_psychology.md",
+      "page_file": "raw_book_quantum_psychology.md",
+      "domains": ["model_agnosticism", "language", "epistemology"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_rebels_and_devils",
+      "title": "Rebels & Devils",
+      "entity_class": "work",
+      "card_file": "raw_book_rebels_and_devils.md",
+      "page_file": "raw_book_rebels_and_devils.md",
+      "domains": ["anthology", "anti_authoritarianism", "liberation_psychology"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_schrodingers_cat_trilogy",
+      "title": "Schrodinger's Cat Trilogy",
+      "entity_class": "work",
+      "card_file": "raw_book_schrodingers_cat_trilogy.md",
+      "page_file": "raw_book_schrodingers_cat_trilogy.md",
+      "domains": ["fiction", "quantum_parody", "branching_reality"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_secrets_of_western_tantra",
+      "title": "Secrets of Western Tantra",
+      "entity_class": "work",
+      "card_file": "raw_book_secrets_of_western_tantra.md",
+      "page_file": "raw_book_secrets_of_western_tantra.md",
+      "domains": ["tantra", "sexuality", "occult"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_sex_drugs_and_magick",
+      "title": "Sex, Drugs and Magick",
+      "entity_class": "work",
+      "card_file": "raw_book_sex_drugs_and_magick.md",
+      "page_file": "raw_book_sex_drugs_and_magick.md",
+      "domains": ["psychedelic_culture", "sexuality", "occult"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_the_earth_will_shake",
+      "title": "The Earth Will Shake",
+      "entity_class": "work",
+      "card_file": "raw_book_the_earth_will_shake.md",
+      "page_file": "raw_book_the_earth_will_shake.md",
+      "domains": ["historical_illuminatus", "travel", "tarot_structure"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_the_new_inquisition",
+      "title": "The New Inquisition",
+      "entity_class": "work",
+      "card_file": "raw_book_the_new_inquisition.md",
+      "page_file": "raw_book_the_new_inquisition.md",
+      "domains": ["dogmatism", "skepticism", "censorship"],
+      "status": "draft"
+    },
+    {
+      "id": "raw_book_wilhelm_reich_in_hell",
+      "title": "Wilhelm Reich in Hell",
+      "entity_class": "work",
+      "card_file": "raw_book_wilhelm_reich_in_hell.md",
+      "page_file": "raw_book_wilhelm_reich_in_hell.md",
+      "domains": ["satire", "afterlife_fiction", "political_imagination"],
+      "status": "draft"
+    }
+  ]
+}

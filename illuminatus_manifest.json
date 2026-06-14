@@ -1,0 +1,219 @@
+{
+  "id": "illuminatus_manifest",
+  "title": "Illuminatus Portal Manifest",
+  "version": "0.1.0",
+  "status": "seed",
+  "description": "Top-level section and entity manifest for the Illuminatus knowledge portal.",
+  "project_files": [
+    "project_illuminatus.md",
+    "project_illuminatus_raw.md",
+    "project_illuminatus_styleguide.md",
+    "architecture_context_engineering.md",
+    "concept_raw_ontology.md",
+    "ontology_raw_illuminatus.json",
+    "raw_manifest.json",
+    "relationships_raw_illuminatus.json",
+    "map_layers_illuminatus.json",
+    "map_layers_historical_illuminatus.json",
+    "illuminatus_concept_cards.md",
+    "illuminatus_routine_cards.md",
+    "illuminatus_focus_pages.md",
+    "illuminatus_plot_summary_cards.md"
+  ],
+  "sections": [
+    {
+      "id": "characters",
+      "label": "Characters",
+      "entity_class": "character",
+      "status": "placeholder",
+      "notes": "[Need to add more character cards and page records]"
+    },
+    {
+      "id": "concepts",
+      "label": "Concepts",
+      "entity_class": "concept",
+      "status": "seed",
+      "card_file": "illuminatus_concept_cards.md",
+      "seed_entities": [
+        "discordianism",
+        "operation_mindfuck",
+        "reality_tunnels",
+        "model_agnosticism",
+        "chapel_perilous",
+        "conspiracy_as_initiation",
+        "conspiracy_as_literary_form",
+        "occult_parody",
+        "qabalah_tree_logic",
+        "thelema_crowleyan_reference",
+        "secret_societies",
+        "paranoia_as_method",
+        "general_semantics",
+        "psychedelic_epistemology",
+        "countercultural_media_ecology"
+      ]
+    },
+    {
+      "id": "plot_summaries",
+      "label": "Plot Summaries",
+      "entity_class": "scene",
+      "status": "seed",
+      "card_file": "illuminatus_plot_summary_cards.md",
+      "seed_entities": [
+        "information_detonation",
+        "investigative_drift",
+        "discordian_disorientation",
+        "secret_society_inflation",
+        "occult_system_play",
+        "countercultural_media_circuit",
+        "sexual_political_farce",
+        "apocalypse_revelation_cosmic_joke"
+      ],
+      "notes": "[Need to add more chapter and subplot detail]"
+    },
+    {
+      "id": "routines",
+      "label": "Routines",
+      "entity_class": "routine",
+      "status": "seed",
+      "card_file": "illuminatus_routine_cards.md",
+      "description": "Burroughs-like routines: repeated textual scripts, paranoid loops, comic set-pieces, initiatory tests, and control-system breakdowns.",
+      "seed_entities": [
+        "conspiracy_callback_routine",
+        "bureaucratic_control_routine",
+        "initiatory_confusion_routine",
+        "media_contagion_routine",
+        "occult_instruction_routine",
+        "discordian_reversal_routine",
+        "sexual_farce_routine",
+        "catalog_of_secret_names_routine",
+        "paranoid_detective_routine",
+        "cosmic_joke_routine",
+        "cut_up_proximity_routine"
+      ]
+    },
+    {
+      "id": "focus_pages",
+      "label": "Focus Pages",
+      "entity_class": "plot_arc",
+      "status": "seed",
+      "page_file": "illuminatus_focus_pages.md",
+      "seed_entities": [
+        "detective_story",
+        "discordian_initiation",
+        "conspiracy_cartography",
+        "occult_instruction_manual"
+      ]
+    },
+    {
+      "id": "places_maps",
+      "label": "Places and Maps",
+      "entity_class": "place",
+      "status": "seed",
+      "map_files": [
+        "map_layers_illuminatus.json",
+        "map_layers_historical_illuminatus.json"
+      ]
+    },
+    {
+      "id": "raw_section",
+      "label": "RAW Section",
+      "entity_class": "work",
+      "manifest_file": "raw_manifest.json",
+      "status": "draft"
+    },
+    {
+      "id": "counterculture",
+      "label": "Counterculture",
+      "entity_class": "movement",
+      "card_file": "raw_counterculture_cards.md",
+      "status": "draft"
+    },
+    {
+      "id": "psychedelic",
+      "label": "Psychedelic",
+      "entity_class": "psychedelic_concept",
+      "card_file": "raw_psychedelic_cards.md",
+      "status": "draft"
+    },
+    {
+      "id": "occult",
+      "label": "Occult",
+      "entity_class": "esoteric_correspondence",
+      "card_file": "raw_occult_cards.md",
+      "status": "draft"
+    }
+  ],
+  "seed_entities": [
+    {
+      "id": "robert_anton_wilson",
+      "label": "Robert Anton Wilson",
+      "entity_class": "person",
+      "card_file": "raw_bio_robert_anton_wilson.md",
+      "page_file": "raw_bio_robert_anton_wilson.md",
+      "evidence_status": "verified"
+    },
+    {
+      "id": "robert_shea",
+      "label": "Robert Shea",
+      "entity_class": "person",
+      "card_file": "raw_associates_cards.md",
+      "evidence_status": "verified"
+    },
+    {
+      "id": "the_illuminatus_trilogy",
+      "label": "The Illuminatus! Trilogy",
+      "entity_class": "work",
+      "card_file": "raw_book_illuminatus.md",
+      "page_file": "raw_book_illuminatus.md",
+      "evidence_status": "verified"
+    },
+    {
+      "id": "discordianism",
+      "label": "Discordianism",
+      "entity_class": "concept",
+      "card_file": "raw_occult_cards.md",
+      "evidence_status": "interpretive"
+    },
+    {
+      "id": "reality_tunnels",
+      "label": "Reality Tunnels",
+      "entity_class": "psychedelic_concept",
+      "card_file": "raw_psychedelic_cards.md",
+      "evidence_status": "interpretive"
+    },
+    {
+      "id": "model_agnosticism",
+      "label": "Model Agnosticism",
+      "entity_class": "concept",
+      "card_file": "raw_psychedelic_cards.md",
+      "evidence_status": "interpretive"
+    },
+    {
+      "id": "chapel_perilous",
+      "label": "Chapel Perilous",
+      "entity_class": "concept",
+      "status": "placeholder",
+      "notes": "[Need to add more source confirmation]"
+    },
+    {
+      "id": "william_s_burroughs",
+      "label": "William S. Burroughs",
+      "entity_class": "person",
+      "status": "placeholder",
+      "notes": "[Need to add more source confirmation]"
+    },
+    {
+      "id": "timothy_leary",
+      "label": "Timothy Leary",
+      "entity_class": "person",
+      "card_file": "raw_psychedelic_cards.md",
+      "evidence_status": "verified"
+    }
+  ],
+  "next_build_targets": [
+    "Create the Illuminatus portal HTML/app page.",
+    "Normalize card/page records from raw markdown into machine-readable JSON.",
+    "Replace keyword relation discovery with relationships_raw_illuminatus.json edges.",
+    "Prototype Leaflet or MapLibre using the map layer files."
+  ]
+}

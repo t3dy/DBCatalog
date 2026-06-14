@@ -20,7 +20,7 @@ Traditional retrieval-augmented generation (RAG) relies on an LLM scanning raw f
 
 ## 📚 Cataloged Database Projects
 
-This memory system currently tracks 10 major projects, mostly centered around Digital Humanities, Western Esotericism, Game Design, and Intellectual History.
+This memory system currently tracks 11 major projects, mostly centered around Digital Humanities, Western Esotericism, Game Design, and Intellectual History.
 
 ### 1. AtalantaClaudiens
 A digital humanities website showcasing scholarship on Michael Maier's *Atalanta Fugiens* (1618). It features 50 alchemical emblems with comparative scholarly commentary, mapped textual sources, an alchemical dictionary, and a strict data provenance tracking system.
@@ -51,3 +51,6 @@ A DH site analyzing Shakespeare's 154 Sonnets across four pillars: Analyses, Dir
 
 ### 10. QueryPat (Philip K. Dick Knowledge Portal)
 A React/Vite-based scholarly portal about Philip K. Dick. It synthesizes 1,107 Exegesis segments, 646 biography events, and 237 scholarly documents. Governed by a deep ontological framework (`PKDontology.md`), it surfaces rather than flattens contradictions and classifies evidence across five distinct interpretive lanes.
+
+### 11. Illuminatus! Trilogy Knowledge Portal
+A digital humanities atlas for Robert Anton Wilson and Robert Shea's *The Illuminatus! Trilogy*, with interactive place mapping, hover summaries, and CrowleyDB-linked esoteric analysis spanning literature and religious studies.

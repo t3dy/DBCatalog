@@ -1,0 +1,141 @@
+{
+  "id": "ontology_raw_illuminatus",
+  "title": "RAW / Illuminatus Portal Ontology",
+  "version": "0.1.0",
+  "status": "seed",
+  "description": "Schema vocabulary for the Illuminatus and Robert Anton Wilson knowledge portal. It separates entity classes, relation types, evidence status, and card/page expectations so content can be generated progressively.",
+  "entity_classes": [
+    {
+      "id": "work",
+      "label": "Work",
+      "description": "A book, trilogy, essay collection, play, anthology, or other authored text."
+    },
+    {
+      "id": "person",
+      "label": "Person",
+      "description": "A historical person, collaborator, influence, critic, editor, or public interlocutor."
+    },
+    {
+      "id": "character",
+      "label": "Character",
+      "description": "A fictional character or factional persona appearing in Illuminatus-related fiction."
+    },
+    {
+      "id": "concept",
+      "label": "Concept",
+      "description": "An interpretive idea, term, model, or recurring theme."
+    },
+    {
+      "id": "place",
+      "label": "Place",
+      "description": "A real, fictional, or hybrid location used by the narrative atlas."
+    },
+    {
+      "id": "routine",
+      "label": "Routine",
+      "description": "A recurring textual, comic, paranoid, initiatory, or Burroughs-like sequence that can be analyzed as scripted repetition."
+    },
+    {
+      "id": "scene",
+      "label": "Scene",
+      "description": "A bounded narrative unit tied to characters, places, motifs, and passages."
+    },
+    {
+      "id": "plot_arc",
+      "label": "Plot Arc",
+      "description": "A thematic or narrative reading path such as Detective Story, Discordian Initiation, or Conspiracy Cartography."
+    },
+    {
+      "id": "esoteric_correspondence",
+      "label": "Esoteric Correspondence",
+      "description": "A Thelemic, Qabalistic, tarot, magical, Discordian, or secret-society reference treated with evidence and interpretive caution."
+    },
+    {
+      "id": "movement",
+      "label": "Countercultural Movement",
+      "description": "A scene, tendency, or milieu such as psychedelic counterculture, Discordianism, Beat afterlife, or underground publishing."
+    },
+    {
+      "id": "psychedelic_concept",
+      "label": "Psychedelic Concept",
+      "description": "A consciousness, altered-state, or Leary-adjacent model tracked as a portal concept."
+    },
+    {
+      "id": "publication_venue",
+      "label": "Publication Venue",
+      "description": "A magazine, zine, press, website, or archive venue."
+    },
+    {
+      "id": "media_item",
+      "label": "Interview / Audio / Video",
+      "description": "An interview, lecture, recording, transcript, or audiovisual archive item."
+    },
+    {
+      "id": "relationship",
+      "label": "Relationship / Edge",
+      "description": "A typed connection between two portal entities."
+    }
+  ],
+  "relationship_types": [
+    "influenced_by",
+    "influences",
+    "critiques",
+    "parodies",
+    "initiates_into",
+    "maps_to",
+    "appears_in",
+    "associated_with",
+    "corresponds_to",
+    "alludes_to",
+    "transforms",
+    "satirizes",
+    "hybridizes",
+    "debates",
+    "cites",
+    "introduced_by",
+    "traveled_through",
+    "coauthors",
+    "uses_method",
+    "part_of_scene",
+    "documents",
+    "shares_lineage_with"
+  ],
+  "evidence_statuses": [
+    {
+      "id": "verified",
+      "description": "Directly supported by a source currently in hand."
+    },
+    {
+      "id": "likely",
+      "description": "A strong inference from available sources, but not yet directly anchored."
+    },
+    {
+      "id": "interpretive",
+      "description": "A scholarly reading or critical claim rather than a bare bibliographic fact."
+    },
+    {
+      "id": "placeholder",
+      "description": "A known slot awaiting more source confirmation."
+    }
+  ],
+  "entry_layers": {
+    "card": "Short browsing record used by overview pages, search results, relation drawers, and map popups.",
+    "page": "Long-form essay record used for close reading, scholarly synthesis, and source notes.",
+    "source_packet": "Smallest available source excerpt or bibliographic note needed to enrich or audit one entity."
+  },
+  "placeholder_protocol": [
+    "[Need to add more bibliographic detail]",
+    "[Need to add more interview detail]",
+    "[Need to add more transcript detail]",
+    "[Need to add more zine metadata]",
+    "[Need to add more source confirmation]",
+    "[Need to add more chapter and subplot detail]",
+    "[Need to add more location evidence]"
+  ],
+  "editorial_constraints": [
+    "Distinguish fact, inference, interpretation, and esoteric association.",
+    "Do not flatten RAW's ambiguity into simple doctrinal belief.",
+    "Track irony, masks, initiatory play, paranoia, counterculture rhetoric, and model agnosticism.",
+    "Use card-first, page-second, source-packet-last context loading."
+  ]
+}

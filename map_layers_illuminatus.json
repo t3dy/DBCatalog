@@ -1,0 +1,87 @@
+{
+  "id": "map_layers_illuminatus",
+  "title": "Illuminatus Map Layers",
+  "version": "0.1.0",
+  "status": "prototype",
+  "description": "Layer definitions for the main all-locations Illuminatus atlas and future book-specific maps.",
+  "map_sets": [
+    {
+      "id": "illuminatus_master_atlas",
+      "label": "Illuminatus Master Atlas",
+      "description": "A full-series map for real, fictional, and hybrid locations in The Illuminatus! Trilogy.",
+      "scope": "all_books",
+      "default_layers": [
+        "plot_geography",
+        "discordian_conspiracy"
+      ],
+      "status": "placeholder",
+      "notes": "[Need to add more location evidence]"
+    },
+    {
+      "id": "illuminatus_book_specific_maps",
+      "label": "Book-Specific Illuminatus Maps",
+      "description": "Separate close-reading maps for individual books or major narrative divisions.",
+      "scope": "book_or_part",
+      "status": "placeholder",
+      "notes": "[Need to add more chapter and subplot detail]"
+    }
+  ],
+  "layers": [
+    {
+      "id": "plot_geography",
+      "label": "Plot Geography",
+      "description": "Locations tied to scenes, movement, investigation, and narrative transitions.",
+      "enabled_by_default": true
+    },
+    {
+      "id": "historical_geography",
+      "label": "Historical Geography",
+      "description": "Real-world historical locations and contexts invoked by the trilogy.",
+      "enabled_by_default": false
+    },
+    {
+      "id": "esoteric_crowleyan_qabalistic",
+      "label": "Esoteric / Crowleyan / Qabalistic Layer",
+      "description": "Locations annotated through Thelema, Qabalah, occult parody, secret societies, and esoteric correspondences.",
+      "enabled_by_default": false
+    },
+    {
+      "id": "character_routes",
+      "label": "Character Routes",
+      "description": "Routes or movement arcs for characters and factions.",
+      "enabled_by_default": false
+    },
+    {
+      "id": "discordian_conspiracy",
+      "label": "Discordian / Conspiracy Layer",
+      "description": "Locations where conspiracy discourse, Discordian parody, or initiatory confusion becomes especially important.",
+      "enabled_by_default": true
+    }
+  ],
+  "popup_template": {
+    "hover_summary": "20-40 words explaining the location's immediate narrative role.",
+    "click_frame": {
+      "tabs": [
+        "passage",
+        "commentary",
+        "esoteric_crosslinks",
+        "people_and_places"
+      ],
+      "placeholder": "[Need to add more location evidence]"
+    }
+  },
+  "locations": [
+    {
+      "id": "illuminatus_location_placeholder",
+      "label": "Location Placeholder",
+      "place_type": "hybrid",
+      "layers": [
+        "plot_geography"
+      ],
+      "coordinates": null,
+      "hover_summary": "[Need to add more location evidence]",
+      "click_frame": "[Need to add more chapter and subplot detail]",
+      "evidence_status": "placeholder"
+    }
+  ]
+}

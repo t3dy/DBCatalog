@@ -1,0 +1,110 @@
+{
+  "id": "relationships_raw_illuminatus",
+  "title": "RAW / Illuminatus Relationship Seed Graph",
+  "version": "0.1.0",
+  "status": "seed",
+  "description": "Curated relationship edges for the portal. These should eventually drive the relational browser instead of relying only on keyword overlap.",
+  "edges": [
+    {
+      "id": "edge_raw_coauthors_shea",
+      "source": "robert_anton_wilson",
+      "target": "robert_shea",
+      "type": "coauthors",
+      "evidence_status": "verified",
+      "source_file": "raw_book_illuminatus.md",
+      "note": "Wilson and Shea are treated as coauthors of The Illuminatus! Trilogy."
+    },
+    {
+      "id": "edge_illuminatus_written_by_raw",
+      "source": "the_illuminatus_trilogy",
+      "target": "robert_anton_wilson",
+      "type": "associated_with",
+      "evidence_status": "verified",
+      "source_file": "raw_book_illuminatus.md"
+    },
+    {
+      "id": "edge_illuminatus_written_by_shea",
+      "source": "the_illuminatus_trilogy",
+      "target": "robert_shea",
+      "type": "associated_with",
+      "evidence_status": "verified",
+      "source_file": "raw_book_illuminatus.md"
+    },
+    {
+      "id": "edge_illuminatus_discordianism",
+      "source": "the_illuminatus_trilogy",
+      "target": "discordianism",
+      "type": "alludes_to",
+      "evidence_status": "interpretive",
+      "source_file": "raw_occult_cards.md",
+      "note": "The portal should distinguish Discordian material as satire, initiatory play, and cultural reference rather than a flat doctrine."
+    },
+    {
+      "id": "edge_raw_reality_tunnels",
+      "source": "robert_anton_wilson",
+      "target": "reality_tunnels",
+      "type": "associated_with",
+      "evidence_status": "interpretive",
+      "source_file": "raw_psychedelic_cards.md"
+    },
+    {
+      "id": "edge_raw_model_agnosticism",
+      "source": "robert_anton_wilson",
+      "target": "model_agnosticism",
+      "type": "associated_with",
+      "evidence_status": "interpretive",
+      "source_file": "raw_psychedelic_cards.md"
+    },
+    {
+      "id": "edge_prometheus_leary",
+      "source": "raw_book_prometheus_rising",
+      "target": "timothy_leary",
+      "type": "associated_with",
+      "evidence_status": "verified",
+      "source_file": "raw_psychedelic_cards.md",
+      "note": "Prometheus Rising is central to the portal's Leary / Eight Circuit model strand."
+    },
+    {
+      "id": "edge_quantum_psychology_model_agnosticism",
+      "source": "raw_book_quantum_psychology",
+      "target": "model_agnosticism",
+      "type": "foregrounds",
+      "evidence_status": "interpretive",
+      "source_file": "raw_book_quantum_psychology.md"
+    },
+    {
+      "id": "edge_cosmic_trigger_chapel_perilous",
+      "source": "raw_book_cosmic_trigger_i",
+      "target": "chapel_perilous",
+      "type": "foregrounds",
+      "evidence_status": "placeholder",
+      "source_file": "raw_book_cosmic_trigger_i.md",
+      "note": "[Need to add more source confirmation]"
+    },
+    {
+      "id": "edge_illuminatus_secret_societies",
+      "source": "the_illuminatus_trilogy",
+      "target": "secret_societies",
+      "type": "satirizes",
+      "evidence_status": "interpretive",
+      "source_file": "raw_occult_cards.md"
+    },
+    {
+      "id": "edge_illuminatus_routines_burroughs",
+      "source": "routines",
+      "target": "william_s_burroughs",
+      "type": "shares_lineage_with",
+      "evidence_status": "placeholder",
+      "note": "[Need to add more source confirmation]"
+    },
+    {
+      "id": "edge_historical_illuminatus_travel_map",
+      "source": "raw_book_the_earth_will_shake",
+      "target": "historical_illuminatus_europe_travel",
+      "type": "maps_to",
+      "evidence_status": "placeholder",
+      "source_file": "map_layers_historical_illuminatus.json",
+      "note": "[Need to add more location evidence]"
+    }
+  ]
+}

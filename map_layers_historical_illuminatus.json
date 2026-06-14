@@ -1,0 +1,60 @@
+{
+  "id": "map_layers_historical_illuminatus",
+  "title": "Historical Illuminatus Travel Map Layers",
+  "version": "0.1.0",
+  "status": "prototype",
+  "description": "A specialized map family for The Historical Illuminatus Chronicles, emphasizing character movement through Europe, crossings, cities, political pressure points, and initiatory geography.",
+  "map_sets": [
+    {
+      "id": "historical_illuminatus_europe_travel",
+      "label": "Historical Illuminatus Europe Travel Map",
+      "work_id": "raw_book_the_earth_will_shake",
+      "scope": "historical_illuminatus_cycle",
+      "description": "A route-forward map for tracing characters across European political, esoteric, and revolutionary geographies.",
+      "status": "placeholder",
+      "notes": "[Need to add more location evidence]"
+    }
+  ],
+  "layers": [
+    {
+      "id": "travel_routes",
+      "label": "Character Travel Routes",
+      "description": "Sequential movements, journeys, crossings, and route logic.",
+      "enabled_by_default": true
+    },
+    {
+      "id": "political_history",
+      "label": "Political History",
+      "description": "Cities, courts, institutions, and revolutionary pressure points.",
+      "enabled_by_default": true
+    },
+    {
+      "id": "secret_society_geography",
+      "label": "Secret-Society Geography",
+      "description": "Locations tied to lodges, initiations, rumor, and secret-society plotting.",
+      "enabled_by_default": false
+    },
+    {
+      "id": "tarot_and_esoteric_structure",
+      "label": "Tarot and Esoteric Structure",
+      "description": "Spatial annotations tied to tarot sequence, initiation motifs, and symbolic geography.",
+      "enabled_by_default": false
+    }
+  ],
+  "route_template": {
+    "route_id": "stable route identifier",
+    "character_or_group": "character or faction name",
+    "sequence": "ordered place ids",
+    "interpretive_note": "Why this route matters as narrative, history, or esoteric structure.",
+    "placeholder": "[Need to add more chapter and subplot detail]"
+  },
+  "routes": [
+    {
+      "id": "historical_illuminatus_route_placeholder",
+      "character_or_group": "[Need to add more character detail]",
+      "sequence": [],
+      "interpretive_note": "[Need to add more chapter and subplot detail]",
+      "evidence_status": "placeholder"
+    }
+  ]
+}

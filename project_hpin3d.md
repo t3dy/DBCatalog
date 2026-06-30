@@ -25,10 +25,12 @@ The 46 non-showcase emblems render as **lit 3-D woodcut reliefs**: the plate ima
 ## Fragile parts
 `STATUS.md` / `TECH_STACK.md` are stale (claim "NOT STARTED" / list uninstalled Vite/Theatre/Zustand; the real app is CDN-only) — stale-docs trap. Manual cache-bust (`main.js?v=19`, `EmblemScene.js?v=9`). Canvas-sizing + missing-asset traps fixed but recorded in [[environment-health]]. Cross-project DB coupling to sibling HP/Atalanta DBs. Diorama renderer + gallery-wall + relief-tune were shipped under a **wedged preview-screenshot tool** (structurally verified — data/asset 200s, zero console errors, emissive-floor brightness guarantee — aesthetics pending a live eyeball).
 
+## HP rooms (folio-keyed)
+The Hypnerotomachia world now cycles **four** orbitable rooms (arrow keys; Archives folio-nodes route by folio): **Fountain of Venus** (f.80), **Planetary Palace** (f.88 — the 7 metals on pedestals, Saturn→Sol→Luna, canvas-glyph plaques), **Three Doors** (f.119 — Virtue / Middle Way / Pleasure portals), **Quinta Essentia** (f.164 — a radiant dodecahedron over the four elements). `HPScene(sceneKey)` branches; `HP_ROOMS` table in `main.js`. Still unmodelled: alchemical_temple (f.28/31), procession (f.162), garden (f.14).
+
 ## Status & next
-Shipped and live (carved reliefs, 2.5-D diorama, lit gallery wall, 4 tours, games↔research). Reconcile stale planning docs to reality. Remaining fronts:
-- **Deeper HP rooms** — only the Fountain (folio 80) is built; `world_links.json` names 7 more `hp_scene`s (alchemical_temple, planetary_palace, three_doors, procession, quinta_essentia, garden). Pure-visual, best built when the screenshot tool is back.
-- Tune the diorama depth heuristic / cutout coverage once visually verified; the [[project_emblemprintshop]] cutouts (743 labelled, per-emblem `summary.json`) remain the source.
+Shipped and live (carved reliefs, 2.5-D diorama, lit gallery wall, 4 tours, 4 HP rooms, games↔research). **Caveat:** the diorama, gallery wall, relief tune, and all 3 new HP rooms shipped under a wedged preview-screenshot tool — structurally verified (build + navigate, zero console errors) but **not yet visually confirmed**; a single live eyeball could redirect a lot of this work. Reconcile stale planning docs to reality once confirmed.
+- Tune the diorama depth heuristic / cutout coverage once visually verified; the [[project_emblemprintshop]] cutouts remain the source.
 
 ## Related
 - [[project_hypnerotomachia]] — marginalia DB (source of `hp_symbols` annotator-hand notes)

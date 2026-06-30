@@ -109,6 +109,7 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 - **[Prompt Archaeology Machines](architecture_prompt_archaeology_machines.md)**: Pipeline design for extracting actionable insights from LLM chats.
 - **[Scholarly Writing & Voice](concept_scholarly_writing.md)**: Global style guide enforcing critical-reportorial density.
 - **[Auditing the Writing](concept_auditing_writing.md)**: Token-efficient pipeline for reviewing and elevating LLM prose.
+- **[The Opportunity Audit](concept_opportunity_audit.md)**: Method for auditing a *shipped* project to find improvements — render-and-look, unsurfaced data, asset reality, dead-end interactions. The "what to build next" counterpart to audit-failures.
 - **[Database Theories & Architecture Analysis](concept_database_theories.md)**: Structural analysis of Knowledge Portals, Procedural Engines, and Social Megaphones.
 - **[Frontend Patterns & UI Framework](architecture_frontend_patterns.md)**: Styling rules, relational browsing UX, and scholarly card templates.
 - **[Progressive Context Engineering](architecture_context_engineering.md)**: Layered retrieval strategy for card/page/source packets and minimal context loading.

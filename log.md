@@ -2,6 +2,11 @@
 
 Chronological, append-only record of operations performed on the wiki. 
 
+## [2026-06-29] synthesize | The Opportunity Audit method (from HPin3D session)
+- Filed [[concept_opportunity_audit]] — a reusable method for auditing a *shipped* project to find improvements (render-and-look · unsurfaced data · asset reality · dead-end interactions). The "what to build next" counterpart to [[audit-failures]] and [[concept_auditing_writing]]. Indexed under Master Concepts & Architecture.
+- Sourced from an HPin3D ([[project_hpin3d]]) work session: probe 1 caught a WebGL `<canvas>` rendering the whole app into a 300×150 box (invisible to console/snapshot — only a screenshot revealed it); probe 2 found 51 hidden `discourse_summary` scholarship blocks → built a **Tours** feature connecting the 3-D models to the research; probe 3 found `emblems.json` referencing absent images (self-hosted from AlchemyBeatEmUp); probe 4 found the gallery unlit + the HP fountain non-orbitable.
+- Added two `environment-health.md` silent-failure rows: the canvas-sizing trap and the missing-referenced-assets trap.
+
 ## [2026-06-29] ingest + maint | Closing coverage pass, git-init, system.md rename
 - **Closing pass (6 pages)**: 3-agent survey + 8-dir triage. Created [[project_promptarchaeology]] (1.45M-prompt distant reading over megabase.db, ACTIVE), [[project_shwep]] (dark-academic style kit + skill, STABLE), [[project_glitchmario]], [[project_ubiktrainings]] (PKD planning skill system behind [[project_pkdplanningsite]]), [[project_oldragdonald]] (Android field tool), [[project_mapresearch]] (map R&D for [[project_alchemytimelinemap]]). Last four are honest stubs (one-liner + status; architecture not surveyed in depth).
 - Triage outcomes folded into `coverage.md` Skipped: AlchemyProtos (dormant), mtg-research (scratch), VCG_DOCS (fold into [[project_vibecoding]]), **CDevsm-webmaster-site (empty dir — deletion candidate)**. Coverage queue now empty: every C:\Dev dir triaged. Registry: 71 projects.

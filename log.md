@@ -2,6 +2,10 @@
 
 Chronological, append-only record of operations performed on the wiki. 
 
+## [2026-06-29] update | HPin3D carved-relief rendering + lighting
+- Refreshed [[project_hpin3d]] with the new look: 46 emblems now render as lit 3-D woodcut reliefs (image-driven displacement + runtime Sobel normal map), showcase scenes get a dim carved backdrop of their plate, lighting overhauled to RoomEnvironment IBL + neutral key/fill/tinted-rim rig. Validated against sibling `EMBLEMSIN3D/relief.js`.
+- Recorded the **next front**: [[project_emblemprintshop]]'s 743 labelled transparent cutouts (per-emblem `summary.json`, all 51 AF emblems) as a layered-diorama source (needs depth inference). Cross-project asset link captured on the project page.
+
 ## [2026-06-29] synthesize | The Opportunity Audit method (from HPin3D session)
 - Filed [[concept_opportunity_audit]] — a reusable method for auditing a *shipped* project to find improvements (render-and-look · unsurfaced data · asset reality · dead-end interactions). The "what to build next" counterpart to [[audit-failures]] and [[concept_auditing_writing]]. Indexed under Master Concepts & Architecture.
 - Sourced from an HPin3D ([[project_hpin3d]]) work session: probe 1 caught a WebGL `<canvas>` rendering the whole app into a 300×150 box (invisible to console/snapshot — only a screenshot revealed it); probe 2 found 51 hidden `discourse_summary` scholarship blocks → built a **Tours** feature connecting the 3-D models to the research; probe 3 found `emblems.json` referencing absent images (self-hosted from AlchemyBeatEmUp); probe 4 found the gallery unlit + the HP fountain non-orbitable.

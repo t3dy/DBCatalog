@@ -2,6 +2,35 @@
 
 Chronological, append-only record of operations performed on the wiki. 
 
+## [2026-06-29] ingest | Gap pass — named-active + alchemy-game projects (4)
+- 4-agent survey of dirs the registry's theme map flagged as un-ingested. Created lean pages: [[project_mtgslider]] (MTG theme→slideshow Python pipeline, STABLE), [[project_dogsgame]] (4DOGS noir text-adventure, ACTIVE), [[project_alchemybeatemup]] (alchemical-engraving → pixel-sprite DH pipeline, STABLE), [[project_alchemytetris]] (cluster: AlchemyBalanceTetris / BALANCETETRIS / TILTRIS / TetrisCodex).
+- Regenerated `registry.tsv` (65 projects). Updated `registry.md` theme map (Alchemy-games, MTG, Games-general) — removed the "not yet ingested" caveats. Updated `index.md`, `coverage.md` (queue ~15 → ~10), and the hardcoded-path row in `environment-health.md` (AlchemyBeatEmUp → `Claudiens/site/images/emblems`).
+
+## [2026-06-29] system | Project registry for cross-project discovery
+- Added `build_registry.py` → generates `registry.tsv` (slug · name · type · status · path · live · tags · desc) by harvesting every `project_*.md`. Resolves real directory paths against the filesystem, so dir names with spaces ("renaissance magic", "Tarot Dev", "hypnerotomachia polyphili") and prose that merely mentions `C:\Dev\wiki` (PicoDB, Illuminatus) no longer mis-resolve. 61 projects harvested.
+- Added `registry.md` — hand-curated theme/alias map (the semantic layer; Deckard split from the deterministic harvest). Resolves fuzzy references like "my alchemy databases" → explicit slug sets, distinguishing databases from games. ~18 themes.
+- **Cross-project hook**: added a pointer in the always-loaded `C:\Dev\CLAUDE.md` so a session in *any* project resolves theme references via `registry.md` + `registry.tsv`. Also linked from `SYSTEM.md` and `index.md`.
+
+## [2026-06-29] system + ingest | Self-healing system files + 13-project sweep
+- **System files** (new): `SYSTEM.md` (operating principles, four operations, verify-before-done gate), `style.md` (voice + markdown conventions + lean ~1.5 KB project-page template), `environment-health.md` (living fragility/silent-failure registry, seeded from the 2026-06-29 usage report + agent sweep), `audit-failures.md` (append-only failure log). Motivated by the usage report's top friction patterns: overclaiming completion, missing project context, silent-failure traps. Designed lean to avoid context bloat (4 files, one source of truth each, no checklist duplication).
+- **Ingest sweep**: fanned out 12 parallel survey agents over recently-modified `C:\Dev` dirs not yet in the wiki. Created 13 lean project pages: `project_hpin3d`, `project_emblemsin3d`, `project_fuguejukebox`, `project_audiobookcleaner`, `project_memorypalace`, `project_nesmusictools` (cluster: NESMusicStudio/REAPERBEYONDNES/NESjamtools/ReapNES-Studio/nes-music-lab/arpeggiator-composer/NESARPEGDESIGNS), `project_esofeed`, `project_pkdfestsite`, `project_pkdplanningsite`, `project_tarotmeditation`, `project_barton` (client cluster, 4 repos), `project_bookstore` (Bookstore+SHOPSITE), `project_smwebmastersite`.
+- **Flagged, not paged**: `ANTIGRAVEMBLEMSIN3D` (scratch Vite fork → noted in [[project_emblemsin3d]]), `antigravbeadgame` (unversioned copy trailing [[project_glassbeadgame]]), `NESARPEGDESIGNS` (empty stub), `membership-site-guide` (stock scaffold), `CDevTarotMeditation` (does not exist).
+- **New fragility recorded** in `environment-health.md`: cross-project hardcoded `C:\Dev` paths (emblem-3D family, FUGUEJUKEBOX, MemoryPalace); stale planning docs vs. shipped code (HPin3D); non-git working copies at loss risk (NESjamtools, REAPERBEYONDNES, Bookstore, antigravbeadgame); `vite fs.allow:['..']` drive exposure.
+- Updated `index.md` (new "System & Maintenance" section + 13 project entries). Internal Claude memory seeded with operating discipline (verify-before-done, check-context-before-asking, user profile, wiki protocol).
+
+## [2026-06-27] synthesize | Platform + Discord strategy for esoteric studies
+- Created `strategy_esoteric_platform.md`: synthesis of the whole C:\Dev ecosystem into one (currently unbundled) platform/commons for esoteric-studies scholars. Five layers — Feed (EsotericBeatNews) · Library (the knowledge portals) · Workshop (EmblemPrintShop/Goetia/games) · Commons (Discord) · Society (SocMagWeb). Distills the transferable doctrine (3+1 DB archetypes, Deckard Boundary, over-engineering trap, static-first, fan-index ethics, provenance-strict scholarship), an outreach funnel for SocMag (Matthew's concern: feed → Discord → membership), guardrails (sustainable solo labor, co-stewards), and a 5-phase plan.
+- Created `strategy_esoteric_discord.md`: concrete Discord blueprint modeled on the Vibe Coding Garage — ~10 channels, lean role set incl. @SocMag Member (verified on-ramp), the feed-bot keystone (webhook off the existing EsotericBeatNews catalog.json), a Megaphone digest bot for SocMag outreach content, governance/safety, and anti-empty-room seeding.
+- Linked to [[concept_database_theories]] (the archetype taxonomy, now +Institutional Infrastructure), [[project_vibecoding]], [[concept_dh_evaluation]]. Cross-refs `SocMagWeb/docs/WEBDEV_FOR_HIRE.md`.
+- Updated `index.md` (new "Strategy & Synthesis" section).
+
+## [2026-06-18] ingest | SocMagWeb — Societas Magica admin rebuild
+- Created `project_socmagweb.md`: Next.js 16 + Postgres rebuild of societasmagica.org's PHP/Bonfire admin panel for a ~494-member scholarly society.
+- Captures the ports-and-adapters architecture (pure `lib/domain/*` + `lib/services` over `lib/ports`), the in-repo agile+Karpathy-wiki orchestrator (`C:\Dev\SocMagWeb\orchestrator/`), and current status: 70 Vitest tests green, 99.65% domain stmt coverage, typecheck clean; Sprints 00/01/02/04 done.
+- Notes the 🔴 launch-blocker found in code review (unsigned forgeable session cookie → privilege escalation, ticket SM-024) and four defects fixed in-review.
+- Linked to [[concept_database_theories]] (transactional admin vs. read-mostly DH portals) and [[architecture_deckard_boundary]] (pure domain vs. I/O adapters).
+- Updated `index.md` Projects list.
+
 ## [2026-06-08] ingest | GoetiaRevEng — Ontology page + scripts 30-31
 - Created `goetia_sigil_analysis.md`: full ontology for the Goetia sigil reverse-engineering project at `C:\Dev\GoetiaRevEng\`. Covers data entities (Sigil, AnalysisFeature, Cluster, PrecedentImage, GridScore), key relationships, four construction method hypotheses (kamea_path, letter_grid, freehand_scribal, corrupted_kamea), data file inventory, and current findings summary.
 - Wrote `30_gematria_path_test.py`: kamea-path gematria test — decomposes each spirit's gematria into a cell sequence on its assigned magic square, compares theoretical path to actual skeleton via Hausdorff + mean-NN distance across 8 isometries.
@@ -179,3 +208,17 @@ Chronological, append-only record of operations performed on the wiki.
 - Added a source packet, a Commento transmission note, and a source-gap packet for Pico's Pater Noster commentary and Benivieni's unpublished vernacular translation.
 - Updated the gap register and section-summary guide: Commento passages involving Ficino now require explicit attention to Benivieni's possible softening/mediation.
 - Updated ontology to version 0.16.0 and exposed new portal cards for Pugliese, the Commento softening problem, and Pico's Pater Noster commentary.
+
+## [2026-06-27] ingest | OCCULTIMGDB (Occult Image DB) project spun up
+- New project `C:\Dev\OCCULTIMGDB\`: static-site archive of WHOLE alchemical/occult illustrations for game-devs/artists. Deliberately whole-image (no element extraction — that distinguishes it from EmblemPrintShop).
+- Inventoried ~3,700 public-domain scans already on disk under EmblemPrintShop/sources (16 source books); reuses them in place, nothing re-downloaded.
+- Built: source registry (config.py), idempotent Pillow importer (build_catalog.py → catalog.json + thumb/card derivatives), static site (gallery with era/tradition/work/motif facets + motif-aware search, detail pages, about/licensing).
+- V1 = 687 curated illustrations across 8 works (Atalanta, Hypnerotomachia, Rosarium, Splendor Solis, Stolcius, Mylius plates, Khunrath, Cramer); 12 flagship Atalanta emblems given web-sourced scholarly summaries with searchable motifs (dragon, wolf, ouroboros, toad, egg, green lion, squared circle).
+- Wrote wiki page project_occultimgdb.md; updated index.md.
+
+## [2026-06-27] ingest | Memory Palace batch — 3 deep pages, 1 refresh, 19 stubs
+- Wrote 3 new deep project pages: `project_glassbeadgame.md` (Glass Bead Game — browser Glasperlenspiel placing esoteric-history "beads" with alchemical glyph attributes, engine-derived relations scored for reconciling opposites and spanning disciplines), `project_emblemprintshop.md` (Emblem Print Shop — local no-API CV pipeline cutting figures from alchemical emblems into 7,097 tagged transparent-PNG "image parts" with a scholarly browse layer), and `project_esotericbeatnews.md` (Esoteric Beat News — dependency-free static site aggregating ~30 esoteric podcasts/channels / ~3,000 episodes into a topic-tabbed card feed from a committed JSON catalog).
+- Refreshed `project_socmagweb.md`: now live on Vercel, test suite up to 153 tests, SM-024 fixed; updated its index.md description accordingly.
+- Added 19 new stub pages and indexed them: EmblemRoguelike, EmblemNovel, ALCHEMYTIMELINEMAP, audiobook-app, AlchemyBlockInvaders, CrowleyDB, AgrippaDOP, EsotericProjectsShowcase, ChristianCabalaDB, MagicalLatin, MedievalMagicDB, WitchcraftStudiesDB, TheosophicalAlchemyDB, ZorziHarmoniaMundi, neoplatonism-portal, Draft Academy, dungeon-architect, Tarot Dev, WitcherPortal.
+- Added 22 new bullets total under index.md "### Projects" (3 deep + 19 stubs) and updated the existing SocMagWeb bullet.
+- Ted's Memory Palace site (`C:\Dev\MemoryPalace`) was built over this wiki as a navigable front-end to the compiled knowledge synthesis.

@@ -12,13 +12,13 @@ Honest accounting of how much of `C:\Dev` the wiki actually documents. Update th
 lists when you ingest, skip, or discover a project. This is the wiki checking its own work —
 **it should never read as "100% done" unless the Not-Yet-Ingested list is genuinely empty.**
 
-Last swept: **2026-06-29** (12-agent sweep of recently-modified dirs, then a 4-agent gap pass for the named-active and alchemy-game projects).
+Last swept: **2026-06-29** (12-agent sweep of recently-modified dirs → 4-agent gap pass for named-active/alchemy-game projects → 3-agent closing pass + 8-dir triage). Every C:\Dev dir has now been triaged at least once.
 
 ## Coverage snapshot
 
-- **65 projects** in the registry (`registry.tsv`); ~60 concept/strategy/system pages besides.
-- **17 project pages added 2026-06-29** (13 in the main sweep + 4 in the gap pass) — see `log.md`.
-- **~10 dirs still un-ingested** (list below) — coverage is partial by design, not complete.
+- **71 projects** in the registry (`registry.tsv`); ~60 concept/strategy/system pages besides.
+- **23 project pages added 2026-06-29** (13 main sweep + 4 gap pass + 6 closing pass) — see `log.md`.
+- **0 known real projects un-ingested.** Remaining un-paged dirs are scratch/empty (see Skipped).
 
 ## Ingested this sweep (17)
 
@@ -31,6 +31,9 @@ Main sweep (13): [[project_hpin3d]] · [[project_emblemsin3d]] · [[project_fugu
 Gap pass (4): [[project_mtgslider]] · [[project_dogsgame]] · [[project_alchemybeatemup]] ·
 [[project_alchemytetris]] (cluster: AlchemyBalanceTetris / BALANCETETRIS / TILTRIS / TetrisCodex)
 
+Closing pass (6): [[project_promptarchaeology]] · [[project_shwep]] · [[project_glitchmario]] ·
+[[project_ubiktrainings]] · [[project_oldragdonald]] · [[project_mapresearch]]
+
 ## Deliberately skipped (with reason)
 
 | Dir | Reason |
@@ -40,16 +43,16 @@ Gap pass (4): [[project_mtgslider]] · [[project_dogsgame]] · [[project_alchemy
 | `NESARPEGDESIGNS` | Empty stub; noted in [[project_nesmusictools]] |
 | `membership-site-guide` | Stock `create-next-app` + tutorial shell; revisit if content fills in |
 | `CDevTarotMeditation` | Does not exist on disk |
+| `AlchemyProtos` | Dormant archive of 8 standalone HTML alchemy-mechanic prototypes; one line under the alchemy-games cluster, not a full page |
+| `mtg-research` | Scratch — a single un-frozen `PARKING_LOT.md` brainstorm; revisit when scope freezes |
+| `VCG_DOCS` | Meeting notes / concept dumps for [[project_vibecoding]] (Vibe Coding Garage) — fold into that page, not its own |
+| `CDevsm-webmaster-site` | **Empty dir** — likely a stray duplicate of [[project_smwebmastersite]] / [[project_socmagweb]]; flagged for deletion |
 | `game`, `games`, `roguelike`, `portal`, `output`, `5174`, `GPTmarch172026`, `GPTREAPERPRODUCTS_chunks` | Scratch / build-output / experiment dirs |
 
 ## Not yet ingested (next sweep queue)
 
-These are real-looking projects the sweep did **not** cover. Coverage is incomplete here.
-
-- **promptarchaeology** — the megabase prompt-archaeology tool (has a Claude skill; real).
-- **SHWEP** — dark-academic site design reference (has a `shwep-build` skill).
-- **AlchemyProtos** — prototype collection (triage for real vs. scratch).
-- **mtg-research**, **GlitchMario**, **OldRAGDonald**, **UbikTrainings**, **MAPRESEARCH**, **VCG_DOCS**, **CDevsm-webmaster-site** — unsurveyed; status unknown.
+Empty — every C:\Dev directory has been triaged. New projects get added here as they appear;
+re-run the sweep below periodically.
 
 ## How to run a coverage sweep
 

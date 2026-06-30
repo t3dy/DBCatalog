@@ -29,7 +29,7 @@ belong to several). "Databases" excludes games; "games" excludes databases — k
 
 ### Alchemy — databases & scholarly portals
 *"my alchemy databases", "the alchemy DBs", "alchemy scholarship"*
-`project_alchemytimelinemap` · `project_theosophicalalchemydb` · `project_emeraldtablet`
+`project_alchemytimelinemap` (+ `project_mapresearch`, map R&D) · `project_theosophicalalchemydb` · `project_emeraldtablet`
 (Hermetic/alchemical) · `project_occultimgdb` (alchemical image archive) ·
 `project_emblemprintshop` (alchemical-emblem CV library) · `project_claudiens` (Atalanta
 Fugiens). *Adjacent magic/esoteric DBs, not strictly alchemy:* `project_renaissancemagic`,
@@ -66,7 +66,7 @@ Fugiens). *Adjacent magic/esoteric DBs, not strictly alchemy:* `project_renaissa
 ### Philip K. Dick
 *"the PKD sites", "Philip K Dick projects"*
 `project_querypat` (scholarship portal) · `project_pkdfestsite` (festival) ·
-`project_pkdplanningsite` (slash-command showcase).
+`project_pkdplanningsite` (slash-command showcase) · `project_ubiktrainings` (the skill system behind it).
 
 ### Tarot
 `project_tarotdev` (knowledge DB) · `project_tarotmeditation` (annotator).
@@ -74,7 +74,7 @@ Fugiens). *Adjacent magic/esoteric DBs, not strictly alchemy:* `project_renaissa
 ### NES / chiptune music
 *"the NES music tools", "the chiptune projects", "the REAPER stuff"*
 `project_nesmusictools` (cluster) · `project_nsfripper` (root ancestor) ·
-`project_fuguejukebox` (Atalanta fugues).
+`project_fuguejukebox` (Atalanta fugues) · `project_glitchmario` (Mario glitch-art).
 
 ### Magic: The Gathering
 `project_mtgslider` (theme → slideshow) · `project_alchemyscryfall` · `project_draftacademy` ·
@@ -95,7 +95,14 @@ see also [[strategy_esoteric_platform]].
 
 ### Memory / wiki / tooling
 `project_memorypalace` (wiki front-end) · `project_framework` (DH scaffolder) ·
-`project_megabase` · `project_socialsdb` · this wiki ([[system]]).
+`project_megabase` · `project_socialsdb` · `project_promptarchaeology` (1.45M-prompt
+distant reading) · this wiki ([[system]]).
+
+### Mobile apps
+`project_audiobookapp` (audiobook player) · `project_oldragdonald` (food-safety field tool).
+
+### Design / style references
+`project_shwep` (dark-academic site style kit + `shwep-build` skill).
 
 ### Client / commercial (not the DH portfolio)
 `project_barton` (Barton Springs Moving).

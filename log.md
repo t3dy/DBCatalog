@@ -2,6 +2,13 @@
 
 Chronological, append-only record of operations performed on the wiki. 
 
+## [2026-06-29] ingest + maint | Closing coverage pass, git-init, system.md rename
+- **Closing pass (6 pages)**: 3-agent survey + 8-dir triage. Created [[project_promptarchaeology]] (1.45M-prompt distant reading over megabase.db, ACTIVE), [[project_shwep]] (dark-academic style kit + skill, STABLE), [[project_glitchmario]], [[project_ubiktrainings]] (PKD planning skill system behind [[project_pkdplanningsite]]), [[project_oldragdonald]] (Android field tool), [[project_mapresearch]] (map R&D for [[project_alchemytimelinemap]]). Last four are honest stubs (one-liner + status; architecture not surveyed in depth).
+- Triage outcomes folded into `coverage.md` Skipped: AlchemyProtos (dormant), mtg-research (scratch), VCG_DOCS (fold into [[project_vibecoding]]), **CDevsm-webmaster-site (empty dir — deletion candidate)**. Coverage queue now empty: every C:\Dev dir triaged. Registry: 71 projects.
+- **Loss-risk git-init**: `git init` + tailored `.gitignore` (deps/venv/media excluded) on Bookstore (0.4 MB), antigravbeadgame (4 MB), REAPERBEYONDNES (8 MB) — committed. NESjamtools left uncommitted (177 MB of `.rpp`/MIDI/NSF even after ignoring `.wav`) — needs a Git LFS decision.
+- **Consistency**: renamed `SYSTEM.md` → `system.md` (lowercase, matching sibling system files) so `[[system]]` wikilinks resolve in MemoryPalace; updated refs in `index.md`, `C:\Dev\CLAUDE.md`, internal memory. Rebuilt MemoryPalace (123 → 129 pages, 163 loci).
+- Updated `environment-health.md` (promptarchaeology → external `megabase.db`), `registry.md` theme map (+6, new Mobile-apps and Design-references themes), `index.md`.
+
 ## [2026-06-29] ingest | Gap pass — named-active + alchemy-game projects (4)
 - 4-agent survey of dirs the registry's theme map flagged as un-ingested. Created lean pages: [[project_mtgslider]] (MTG theme→slideshow Python pipeline, STABLE), [[project_dogsgame]] (4DOGS noir text-adventure, ACTIVE), [[project_alchemybeatemup]] (alchemical-engraving → pixel-sprite DH pipeline, STABLE), [[project_alchemytetris]] (cluster: AlchemyBalanceTetris / BALANCETETRIS / TILTRIS / TetrisCodex).
 - Regenerated `registry.tsv` (65 projects). Updated `registry.md` theme map (Alchemy-games, MTG, Games-general) — removed the "not yet ingested" caveats. Updated `index.md`, `coverage.md` (queue ~15 → ~10), and the hardcoded-path row in `environment-health.md` (AlchemyBeatEmUp → `Claudiens/site/images/emblems`).

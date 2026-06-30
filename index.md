@@ -13,7 +13,7 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 
 ### System & Maintenance
 *(How the wiki operates — read these when working in `C:\Dev\wiki`)*
-- **[SYSTEM.md](SYSTEM.md)**: Operating principles, the four operations, and the verify-before-done gate. Read first.
+- **[system.md](system.md)**: Operating principles, the four operations, and the verify-before-done gate. Read first.
 - **[Style & Template](style.md)**: Writing voice, markdown conventions, and the lean project-page template.
 - **[Environment Health](environment-health.md)**: Living registry of fragile codepaths and silent-failure traps. Check before editing a project.
 - **[Audit / Failures](audit-failures.md)**: Append-only failure log so sessions don't repeat mistakes.
@@ -90,6 +90,12 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 - **[DOGSGAME (4DOGS)](project_dogsgame.md)**: Noir text-adventure life-sim prototype built around four real dogs in Sultan, WA; three-tier canon/design/code layout.
 - **[AlchemyBeatEmUp](project_alchemybeatemup.md)**: DH pipeline turning historical alchemical engravings into pixel-art sprites for a "lab-is-the-boss" beat-em-up.
 - **[Alchemy Tetris](project_alchemytetris.md)**: A family of alchemy-themed Tetris / tilting-balance browser games (BALANCETETRIS → TILTRIS → TetrisCodex arcade).
+- **[promptarchaeology](project_promptarchaeology.md)**: Read-only distant-reading tool surfacing patterns across the user's own ~1.45M LLM prompts (over megabase.db); backs the prompt-archaeology coaching skill.
+- **[SHWEP (style kit)](project_shwep.md)**: Dark-academic site style kit — a study/clone of shwep.net packaged as reusable templates and the `shwep-build` skill.
+- **[GlitchMario](project_glitchmario.md)**: NES *Super Mario* music extraction → glitch-art catalog; a shipped self-contained static site.
+- **[UbikTrainings](project_ubiktrainings.md)**: PKD-themed Claude Code planning skill system — 33 slash commands; the source behind the PKD planning site.
+- **[OldRAGDonald](project_oldragdonald.md)**: Android food-safety field-capture app with offline Vosk speech (ScribeFarm line); PKD-flavored by name only.
+- **[MAPRESEARCH](project_mapresearch.md)**: Active R&D for a directable/animated map feeding ALCHEMYTIMELINEMAP (Python + Leaflet).
 
 ### Strategy & Synthesis
 - **[A Platform (Commons) for Esoteric Studies Scholars](strategy_esoteric_platform.md)**: Synthesis of the whole C:\Dev ecosystem into one unbundled platform (Feed · Library · Workshop · Commons · Society); outreach funnel for SocMag; phased plan.

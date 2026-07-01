@@ -74,6 +74,7 @@ This is the central catalog of the C:\Dev LLM-Wiki memory system. It indexes all
 - **[Tarot Dev](project_tarotdev.md)**: A tarot knowledge database built on a dialectical, non-mystical, structurally attentive interpretive philosophy.
 - **[WitcherPortal](project_witcherportal.md)**: A DH portal on the Eastern European folklore, history, and magic behind Sapkowski's *Witcher* saga.
 - **[HPin3D](project_hpin3d.md)**: 3D web viewer turning *Hypnerotomachia Poliphili* and *Atalanta Fugiens* emblems into explorable alchemical worlds (Three.js, CDN importmap).
+- **[EmblemPapercraft](project_emblempapercraft.md)**: Layered paper pop-up (papercraft) viewer rendering *Atalanta Fugiens* emblems as shadow-cast stacked cutouts in their original engraving style; sibling to HPin3D's reliefs.
 - **[EMBLEMSIN3D](project_emblemsin3d.md)**: Walkable three.js 3D worlds rendering Maier's *Atalanta Fugiens* emblems as carved woodcut reliefs with 8-bit fugues; ~1,500-plate catalog.
 - **[FUGUEJUKEBOX](project_fuguejukebox.md)**: Offline pipeline generating NES-style chiptune variations of Maier's 50 emblem fugues — 500 MP3s.
 - **[AudiobookCleaner](project_audiobookcleaner.md)**: Python CLI that turns scholarly PDFs into clean prose and MP3 audiobooks (clean → translate → narrate).

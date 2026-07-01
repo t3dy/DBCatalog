@@ -2,6 +2,9 @@
 
 Chronological, append-only record of operations performed on the wiki. 
 
+## [2026-06-29] ingest | New project: EmblemPapercraft
+- Created [[project_emblempapercraft]] — a separate static Three.js viewer rendering the *Atalanta Fugiens* emblems as **layered paper pop-ups** (cutouts stacked in front of the plate; depth via `customDepthMaterial` alpha-tested shadows, not geometry). Sibling to [[project_hpin3d]]'s reliefs; shares the [[project_emblemprintshop]] cutout pipeline. `C:\Dev\EmblemPapercraft`, git-init'd, served on :3458. Indexed under Projects. Structural verification only (screenshot tool wedged).
+
 ## [2026-06-29] update | HPin3D diorama + gallery wall + Two Books tour + games↔research
 - Refreshed [[project_hpin3d]]: shipped the 2.5-D cutout diorama (33 emblems, `build_diorama.py`→`diorama.json`), the lit emissive-floored gallery wall, the relief tune (warm tint + contact shadow), a 4th tour **The Two Books** (generated from `world_links.json` — the 9 HP↔AF cross-references), and `discourse_summary` reveals in the Oracle + Fugue Scroll games.
 - Notable: most of this shipped under a **wedged preview-screenshot tool** — verified structurally (asset 200s, zero console errors, emissive-floor brightness guarantee) with aesthetics deferred to a live eyeball. A clean instance of [[concept_opportunity_audit]]'s "render-and-look" probe being unavailable → fall back to structural verification + honest disclosure, never ship a visual claim unverified.
